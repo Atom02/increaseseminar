@@ -1,0 +1,5 @@
+flask_session/
+*.pyc
+site.ini
+startApp.sh
+*.pyc

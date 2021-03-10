@@ -11,6 +11,7 @@ from flask_wtf.csrf import CSRFProtect
 import types
 import os
 from datetime import timedelta
+from flask_mongoengine import MongoEngine
 # from flask_sqlalchemy import SQLAlchemy
 # from flask_migrate import Migrate
 
@@ -40,11 +41,20 @@ app.config["SESSION_TYPE"]="filesystem"
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=31)
 app.config['SESSION_PERMANENT'] = True 
 
-app.config['COMPONENTS'] = cfg.components
-app.config['DB'] = cfg.DB
+# app.config['COMPONENTS'] = cfg.components
+# app.config['DB'] = cfg.DB
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config["ALLOWED_EXTENSIONS"] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
+app.config['MONGODB_SETTINGS'] = {
+    'db': 'increase',
+    'host': '103.16.223.249',
+	'port': 27017,
+	'username':"increaseApp",
+    'password':"incr34se4pp",
+	'authentication_source':"admin",
+	'connect': False
+}
 
 # testing alchecmy but we will not use it
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://'+cfg.DB['user']+':'+cfg.DB['password']+'@'+cfg.DB['host']+':'+str(cfg.DB['port'])+'/'+cfg.DB['db']
@@ -59,6 +69,8 @@ app.jinja_env.add_extension("jinja2.ext.do")
 
 socketio = SocketIO(app, cors_allowed_origins = ["*"])
 cache = Cache(app)
+db = MongoEngine(app)
+# db.init_app(app)
 # db = SQLAlchemy(app)
 # migrate = Migrate(app, db)
 

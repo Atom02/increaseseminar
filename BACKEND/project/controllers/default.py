@@ -10,6 +10,6 @@ def defroute():
 
 @app.teardown_appcontext
 def close_db(error):
-    if hasattr(g,"db"):
-        g.db.close()
-        print("TEARDOWN")
+    # if hasattr(g,"db"):
+    #     g.db.close()
+    print("TEARDOWN")

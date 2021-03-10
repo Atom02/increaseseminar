@@ -1,57 +1,25 @@
 from flask import escape, session,render_template, request, Response, jsonify, make_response, abort, redirect, url_for, json, g
 from flask_classy import route
 from flask_restful import Api, Resource
-from .FrontController import FrontView
 from project import app
-# from project.models.User import User
-from app.RBAC.AuthManager import AuthManager
+from app.mongoController import mongoController
+from project.models.UserModel import User
+import pprint
+from mongoengine.errors import ValidationError
 
-
-class SiteView(FrontView):
-	connectDb = False
-	def behaviors(self):
-		acl = {
-			"rules":[
-				{
-					"allow":True,
-					"action":["logout"],
-					"roles":"@"
-				},
-				{
-					"allow":True,
-					"action":["login","index"],
-					"roles":"?"
-				},
-				{
-					"allow":False,
-					'action':"*",
-					"roles":"?",
-					"denyCallback":(lambda rule,action: abort(401))
-				}
-			]
-		}
-		return acl
-	
-	
-	def before_request(self, name,*args, **kwargs):
-		# print("ALWAYS RUN BEFORE ACTION")
-		super().before_request(name)
-		pass
-
+class SiteView(mongoController):
 	def index(self):
-		return "ALIVE"
-	# access using site/login
-	@route("/login",methods=["POST","GET"])
-	def login(self):
-		# YOU CAN RENDER PAGE IN TEMPLATE FOLDER WITH
-		data = {
-			"some":"data"
-		}
-		return self.render("site/login.html",data)
+		# nuser = User()
+		# nuser.name = "Candra Nur Ihsan"
+		# nuser.email = "candra.nurihsan9"
+		# try:
+		# 	nuser.save()
+		# except ValidationError as e:
+		# 	print(type(e))
+		# except mongoengine.errors.ValidationError as e:
+		# 	# print(type(e[0]))
+		# 	pprint.pprint(e.to_dict())
+		# 	print(e.to_dict())
+		return "Forbiden To Come Here", 403
 
-	@route("/logout",methods=["GET"])
-	def logout(self):
-		session.clear()
-		return jsonify({"status":"ok"})
-
-		
+	

@@ -1,14 +1,14 @@
 conda config --add channels conda-forge
 conda config --set channel_priority strict
-conda install uwsgi
-conda install gevent
-conda install flask
-conda install flask-socketio
-pip install flask-mobility
+conda install -y uwsgi
+conda install -y gevent
+conda install -y flask
+conda install -y flask-socketio
+pip install Flask-Mobility
 pip install flask-session
-conda install flask-caching
-conda install flask-wtf
+conda install -y flask-caching
+conda install -y flask-wtf
 pip install flask-classy
-conda install flask-restful
-conda install pymysql
-pip isntall phpserialize
+conda install -y flask-restful
+conda install -y pymysql
+pip install phpserialize

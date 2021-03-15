@@ -9,11 +9,23 @@
         class="row justify-center items-center content-center q-mt-lg"
         style="background-color:white"
       >
-        <div class="col-11 col-sm-4 text-white">
+        <div class="col-11 col-sm-4 text-center">
           <q-img
-            src="~assets/img/Logo_increase3.png"
+            src="~assets/img/Logo Increase 3.png"
             spinner-color="white"
-            style="width:100%"
+            style="width:30%"
+          />
+          &nbsp;
+          <q-img
+            src="~assets/img/ARN_rogo_100_0524-150x150.png"
+            spinner-color="white"
+            style="width:30%"
+          />
+          &nbsp;
+          <q-img
+            src="~assets/img/Logo_RISH.jpeg"
+            spinner-color="white"
+            style="width:30%"
           />
         </div>
       </div>
@@ -129,9 +141,7 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div
-          class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox"
-        >
+        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
           March 15
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
@@ -140,9 +150,7 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div
-          class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox"
-        >
+        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
           April 15
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
@@ -151,9 +159,7 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div
-          class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox"
-        >
+        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
           May 1 - July 15
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
@@ -162,9 +168,7 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div
-          class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox"
-        >
+        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
           September 20 - 22
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-px-none q-pt-none">
@@ -174,10 +178,8 @@
             <li>
               Joint program of <b>IN</b>ternational <b>C</b>onference on
               <b>R</b>adioscience, <b>E</b>quatorial <b>A</b>tmospheric
-              <b>S</b>cience and <b>E</b>nvironment (<b>INCREASE</b>)
-            </li>
-            <li>
-              The 6th Asia Research Node (ARN) Symposium on Humanosphere Science
+              <b>S</b>cience and <b>E</b>nvironment (<b>INCREASE</b>) and The
+              6th Asia Research Node (ARN) Symposium on Humanosphere Science
             </li>
             <li>
               EAR excursion
@@ -207,7 +209,7 @@
               spinner-color="white"
               style="width:20%"
             />
-            &nbsp;
+            <!-- &nbsp;
             <q-img
               src="~assets/img/ARN_rogo_100_0524-150x150.png"
               spinner-color="white"
@@ -218,7 +220,7 @@
               src="~assets/img/Logo_RISH.jpeg"
               spinner-color="white"
               style="width:20%"
-            />
+            /> -->
             &nbsp;
             <q-img
               src="~assets/img/kyotouniv_logo.jpg"

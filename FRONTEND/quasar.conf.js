@@ -117,36 +117,36 @@ cfg.module.rules.push({
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `com.increase.app`,
-        short_name: `com.increase.app`,
-        description: `increase website seminar`,
+        name: `Ear 20th Anniversary`,
+        short_name: `Ear`,
+        description: `20th Ear Anniversary`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
         theme_color: '#027be3',
         icons: [
           {
-            src: 'icons/icon-128x128.png',
+            src: 'favicomatic/icon-128x128.png',
             sizes: '128x128',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-192x192.png',
+            src: 'favicomatic/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-256x256.png',
+            src: 'favicomatic/icon-256x256.png',
             sizes: '256x256',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-384x384.png',
+            src: 'favicomatic/icon-384x384.png',
             sizes: '384x384',
             type: 'image/png'
           },
           {
-            src: 'icons/icon-512x512.png',
+            src: 'favicomatic/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -184,7 +184,7 @@ cfg.module.rules.push({
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'increase'
+        appId: 'ear'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration

@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "frontendincrease",
+      "script": "quasar",
+      "args": "serve /home/increaseweb/app/increaseseminar/FRONTEND/dist/spa -p 8081 --history -i index.html"      "
+    }
+  ]
+}

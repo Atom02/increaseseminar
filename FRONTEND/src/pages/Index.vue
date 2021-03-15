@@ -240,6 +240,8 @@
           <div class="text-caption">
             <a href="http://www.rish.kyoto-u.ac.jp">www.rish.kyoto-u.ac.jp</a>
             <br />
+            <a href="http://psta.lapan.go.id">psta.lapan.go.id</a>
+            <br />
             <a href="https://www.freepik.com/vectors/business">
               Business vector created by vectorjuice - www.freepik.com
             </a>

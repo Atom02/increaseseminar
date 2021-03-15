@@ -142,7 +142,7 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
-          March 15
+          15 March 2021
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
           First announcement
@@ -151,7 +151,7 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
-          April 15
+          15 April 2021
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
           Second announcement
@@ -160,7 +160,7 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
-          May 1 - July 15
+          1 May - 15 July 2021
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
           Abstract submission
@@ -169,7 +169,7 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
-          September 20 - 22
+          20 - 22 September 2021
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-px-none q-pt-none">
           <!-- MAIN EVENT, <br /> -->
@@ -243,6 +243,10 @@
             <a href="https://www.freepik.com/vectors/business">
               Business vector created by vectorjuice - www.freepik.com
             </a>
+            <br />
+            <a href="https://www.freepik.com/photos/calendar">
+              Calendar photo created by rawpixel.com - www.freepik.com
+            </a>
           </div>
         </div>
       </div>
@@ -268,7 +272,7 @@
   /* background: linear-gradient(180deg, rgba(255,255,255,0.9) 5%, rgba(0,0,0,0.6) 100%),
     url("~assets/img/conference.jpg"); */
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("~assets/img/schedule.png");
+    url("~assets/img/scheduleLite.jpg");
   /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: center;

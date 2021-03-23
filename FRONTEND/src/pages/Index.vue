@@ -192,7 +192,7 @@
     </div>
     <div id="sect4" class="sect q-py-md">
       <div class="row justify-center items-start content-center q-mt-md">
-        <div class="col-12 col-sm-5 q-pa-sm text-body1">
+        <div class="col-12 col-sm-4 q-pa-sm text-body1">
           <div>Organized by:</div>
           <div class="text-weight-bold">
             Pusat Sains dan Teknologi Atmosfer (PSTA) <br />
@@ -229,7 +229,7 @@
             />
           </div>
         </div>
-        <div class="col-12 col-sm-5 q-pa-sm text-body1">
+        <div class="col-12 col-sm-4 q-pa-sm text-body1">
           <div>contact:</div>
           <div class="text-weight-bold">
             <a href="mailto:increase@lapan.go.id">
@@ -250,6 +250,9 @@
               Calendar photo created by rawpixel.com - www.freepik.com
             </a>
           </div>
+        </div>
+        <div class="col-12 col-sm-4 q-pa-sm text-body1">
+          <a href="https://info.flagcounter.com/MASZ"><img src="https://s01.flagcounter.com/countxl/MASZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
         </div>
       </div>
     </div>

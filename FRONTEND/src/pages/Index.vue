@@ -83,11 +83,11 @@
             Scope: <b class="text-h6">'Humanosphere Science'</b> including:
             <br />
             <span class="text-h6">
-              Atmospheric Science, Environmental Science, Space Science,
-              Material Science, Plant Science, Entomology, Microbiology,
-              Ecology, Forestry, Wood Science, Chemistry, Biochemistry,
-              Molecular Biology, Architecture, Electromagnetic Engineering,
-              Agriculture, etc
+              Atmospheric Science, Environmental Science, Oceanography, Space
+              Science, Material Science, Plant Science, Entomology,
+              Microbiology, Ecology, Forestry, Wood Science, Chemistry,
+              Biochemistry, Molecular Biology, Architecture, Electromagnetic
+              Engineering, Agriculture, etc
             </span>
           </p>
         </div>
@@ -252,7 +252,12 @@
           </div>
         </div>
         <div class="col-12 col-sm-4 q-pa-sm text-body1">
-          <a href="https://info.flagcounter.com/MASZ"><img src="https://s01.flagcounter.com/countxl/MASZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+          <a href="https://info.flagcounter.com/MASZ"
+            ><img
+              src="https://s01.flagcounter.com/countxl/MASZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
+              alt="Flag Counter"
+              border="0"
+          /></a>
         </div>
       </div>
     </div>
@@ -295,6 +300,11 @@
 <script>
 import { Flipped } from "vue-flip-toolkit";
 export default {
+  // meta: {
+  //   meta: {
+  //     description: { name: "description", content: "Page 1" }
+  //   }
+  // },
   layout: "Empty",
   name: "PageIndex",
   components: {

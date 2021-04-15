@@ -151,7 +151,8 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
-          15 April 2021
+          <s style="color:#ff8639">15 April 2021</s>
+          30 April 2021
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
           Second announcement

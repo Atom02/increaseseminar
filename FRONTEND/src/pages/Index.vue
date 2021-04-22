@@ -229,6 +229,12 @@
               style="width:20%"
             />
           </div>
+          <div class="q-mt-sm">Related Link:</div>
+          <div class="text-weight-bold">
+            <a href="http://www.rish.kyoto-u.ac.jp/arn6/">
+              www.rish.kyoto-u.ac.jp/arn6/
+            </a>
+          </div>
         </div>
         <div class="col-12 col-sm-4 q-pa-sm text-body1">
           <div>contact:</div>

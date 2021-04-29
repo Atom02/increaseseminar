@@ -170,6 +170,15 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
+          20 September 2021
+        </div>
+        <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
+          Full Paper Submission
+          <q-separator class="xs" color="white" />
+        </div>
+      </div>
+      <div class="row justify-center items-start content-center q-mt-lg">
+        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
           20 - 22 September 2021
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-px-none q-pt-none">
@@ -422,6 +431,37 @@
           </div>
         </div>
         <div class="col-12 col-sm-4 q-pa-sm text-body1">
+          <ShareNetwork
+            network="facebook"
+            url="https://ear20.lapan.go.id"
+            title="Ear 20th Anniversary"
+            description="Equatorial Atmosphere Radar (EAR) 
+  20th Anniversary
+  LAPAN - Kyoto University 
+  International Symposium for Equatorial Atmosphere"
+            quote="Joint program of INternational Conference on Radioscience, Equatorial Atmospheric Science and Environment (INCREASE) and The 6th Asia Research Node (ARN) Symposium on Humanosphere Science"
+            hashtags="ear20anniversary,lapan,increase,seminar"
+            media="https://ear20.lapan.go.id/img/radar.7d21f604.gif"
+            style="text-decoration:none"
+          >
+            <q-btn class="q-ma-sm" icon="mdi-facebook" label="share on facebook" style="background-color:#3b5998" text-color="white"></q-btn>
+          </ShareNetwork>
+
+          <ShareNetwork
+            network="twitter"
+            url="https://ear20.lapan.go.id"
+            title="Ear 20th Anniversary"
+            description="Equatorial Atmosphere Radar (EAR) 
+  20th Anniversary
+  LAPAN - Kyoto University 
+  International Symposium for Equatorial Atmosphere"
+            quote="Joint program of INternational Conference on Radioscience, Equatorial Atmospheric Science and Environment (INCREASE) and The 6th Asia Research Node (ARN) Symposium on Humanosphere Science"
+            hashtags="ear20anniversary,lapan,increase,seminar"
+            media="https://ear20.lapan.go.id/img/radar.7d21f604.gif"
+            style="text-decoration:none"
+          >
+            <q-btn class="q-ma-sm" icon="mdi-twitter" label="share on twitter" style="background-color:#00acee" text-color="white"></q-btn>
+          </ShareNetwork>
           <a href="https://info.flagcounter.com/MASZ">
             <img
               src="https://s01.flagcounter.com/countxl/MASZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
@@ -543,6 +583,7 @@ import { scroll } from "quasar";
 const { getScrollTarget, setScrollPosition } = scroll;
 import { DateTime as LuxonDT } from "luxon";
 
+// Vue.use(VueSocialSharing);
 export default {
   // meta: {
   //   meta: {
@@ -568,7 +609,7 @@ export default {
           color: "secondary",
           scrollTo: "importantDates",
           hasUpdate: false,
-          updateDate: ""
+          updateDate: "2021-04-30"
         },
         {
           label: "Speakers",

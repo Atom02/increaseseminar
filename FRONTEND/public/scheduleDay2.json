@@ -1,0 +1,87 @@
+[
+  {
+    "time": "08:30 – 09:00",
+    "act": "Registration"
+  },
+  {
+    "time": "09:00 – 09:05",
+    "act": "Moderator (1)"
+  },
+  {
+    "time": "09:05 – 09:25",
+    "act": "Invited talk (1)"
+  },
+  {
+    "time": "09:25 – 09:40",
+    "act": "Oral presentation (1)"
+  },
+  {
+    "time": "09:40 – 09:55",
+    "act": "Oral presentation (2)"
+  },
+  {
+    "time": "09:55 – 10:10",
+    "act": "Coffe Break"
+  },
+  {
+    "time": "10:10 – 10:25",
+    "act": "Oral presentation (3)"
+  },
+  {
+    "time": "10:25 – 10:40",
+    "act": "Oral presentation (4)"
+  },
+  {
+    "time": "10:40 – 10:55",
+    "act": "Oral presentation (5)"
+  },
+  {
+    "time": "10:55 – 12:00",
+    "act": "Poster session (1)"
+  },
+  {
+    "time": "12:00 – 13:00",
+    "act": "Launch Break"
+  },
+  {
+    "time": "13:00 – 13:30",
+    "act": "Poster session (2)"
+  },
+  {
+    "time": "13:30 – 13:35",
+    "act": "Moderator (2)"
+  },
+  {
+    "time": "13:35 – 13:55",
+    "act": "Invited talk (2)"
+  },
+  {
+    "time": "13:55 – 14:10",
+    "act": "Oral presentation (6)"
+  },
+  {
+    "time": "14:10 – 14:25",
+    "act": "Oral presentation (7)"
+  },
+  {
+    "time": "14:25 – 14:40",
+    "act": "Coffe Break"
+  },
+  {
+    "time": "14:40 – 14:55",
+    "act": "Oral presentation (8)"
+  },
+  {
+    "time": "14:55 – 15:10",
+    "act": "Oral presentation (9)"
+  },
+  {
+    "time": "15:10 – 15:25",
+    "act": "Oral presentation (10)"
+  },
+  {
+    "time": "15:25 – 16:00",
+    "act": "Closing ceremony in the main room"
+  }
+
+]

@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <div id="sect2" class="sect q-py-md">
+    <div id="sect2" ref="about" class="sect q-py-md">
       <div class="row justify-center items-start content-center q-mt-md">
         <div class="gt-xs col-sm-5 q-pa-sm q-px-lg text-right">
           <q-img
@@ -87,7 +87,7 @@
               Science, Material Science, Plant Science, Entomology,
               Microbiology, Ecology, Forestry, Wood Science, Chemistry,
               Biochemistry, Molecular Biology, Architecture, Electromagnetic
-              Engineering, Agriculture, etc
+              Engineering, Agriculture, Ocean Science, etc
             </span>
           </p>
         </div>
@@ -133,9 +133,9 @@
         </div>
       </div> -->
     </div>
-    <div id="sect3" class="sect q-py-md">
+    <div id="sect3" ref="importantDates" class="sect q-py-md">
       <div class="row justify-center items-center content-center q-mt-md">
-        <div class="col-10 text-white">
+        <div class="col-11 text-white">
           <span class="text-h4">Important Dates </span>
           <!-- <q-separator color="white" /> -->
         </div>
@@ -191,7 +191,163 @@
         </div>
       </div>
     </div>
-    <div id="sect4" class="sect q-py-md">
+    <div id="sect4" ref="keyNoteSpeaker" class="sect q-py-md">
+      <div class="row justify-center items-center content-center q-mt-md">
+        <div class="col-11">
+          <span class="text-h4">Speakers </span>
+        </div>
+      </div>
+      <div class="row justify-center items-start content-center q-mt-md">
+        <div class="col-12 col-md-5 q-pa-sm text-body1">
+          <div class="text-h5 text-primary">Keynote Speakers</div>
+          <div class="text-h6">
+            <ul>
+              <li>
+                Prof. Shigeo Yoden (Kyoto Univ, Japan)<span class="text-red">
+                  *
+                </span>
+              </li>
+              <li>
+                Prof. J.Y. Liu (NCU, Taiwan)<span class="text-red">*</span>
+              </li>
+              <li>Dr. Didi Satiadi (LAPAN, Indonesia)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-sm-5 q-pa-sm text-body1">
+          <div class="text-h5 text-primary">Invited Speakers</div>
+          <div class="text-h6">
+            <ul>
+              <li>Prof. Hiroyuki Hashiguchi (Kyoto Univ, Japan)</li>
+              <li>
+                Ir. Mujtahid, M.T. (LAPAN, Indonesia)
+                <span class="text-red">
+                  *
+                </span>
+              </li>
+              <li>
+                Prof. Tsuyoshi Yoshimura (Kyoto Univ, Japan)
+                <span class="text-red">
+                  *
+                </span>
+              </li>
+              <li>Dr. Marzuki (Andalas Univ, Indonesia)</li>
+              <li>
+                Dr. Yasunobu Miyoshi (Kyoto Univ, Japan)<span class="text-red">
+                  *
+                </span>
+              </li>
+              <li>
+                Prof. Manabu D. Yamanaka (Kyoto Univ, Japan)
+                <span class="text-red">
+                  *
+                </span>
+              </li>
+              <li>Prof. Ninong Komala (LAPAN, Indonesia)</li>
+              <li>
+                Dr. Takuya Tsugawa (Kyoto Univ, Japan)
+                <span class="text-red">
+                  *
+                </span>
+              </li>
+              <li>Dr. Acep Purqon (ITERA, Indonesia)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-red q-pa-sm text-h6">
+          * to be confirmed
+        </div>
+      </div>
+    </div>
+    <div id="sect5" ref="schedule" class="sect q-py-md text-white">
+      <div class="row justify-center items-center content-center q-mt-md">
+        <div class="col-11">
+          <span class="text-h4">Schedule</span>
+        </div>
+      </div>
+      <div class="row justify-center q-mt-md">
+        <div class="col-12 col-sm-11 q-pa-sm dateBox text-h5">
+          DAY 1
+        </div>
+      </div>
+      <div class="row justify-center">
+        <div class="col-12 col-md-5 q-pa-sm text-h6">
+          <template v-for="(item, index) in chunkArray(scheduleDay1, 2)[0]">
+            <div :key="'d10' + index">
+              <span class="scheduleTime">
+                {{ item.time }}
+              </span>
+              <span class="scheduleAct">
+                {{ item.act }}
+              </span>
+            </div>
+          </template>
+        </div>
+        <div class="col-12 col-md-5 q-pa-sm text-h6">
+          <template v-for="(item, index) in chunkArray(scheduleDay1, 2)[1]">
+            <div :key="'d11' + index">
+              <span class="scheduleTime">
+                {{ item.time }}
+              </span>
+              <span class="scheduleAct">
+                {{ item.act }}
+              </span>
+            </div>
+          </template>
+        </div>
+      </div>
+      <div class="row justify-center q-mt-md">
+        <div class="col-12 col-sm-11 q-pa-sm dateBox text-h5">
+          DAY 2 (Paralel Session)
+        </div>
+      </div>
+      <div class="row justify-center">
+        <div class="col-12 col-md-5 q-pa-sm text-h6">
+          <template v-for="(item, index) in chunkArray(scheduleDay2, 2)[0]">
+            <div :key="'d10' + index">
+              <span class="scheduleTime">
+                {{ item.time }}
+              </span>
+              <span class="scheduleAct">
+                {{ item.act }}
+              </span>
+            </div>
+          </template>
+        </div>
+        <div class="col-12 col-md-5 q-pa-sm text-h6">
+          <template v-for="(item, index) in chunkArray(scheduleDay2, 2)[1]">
+            <div :key="'d11' + index">
+              <span class="scheduleTime">
+                {{ item.time }}
+              </span>
+              <span class="scheduleAct">
+                {{ item.act }}
+              </span>
+            </div>
+          </template>
+        </div>
+      </div>
+      <div class="row justify-center q-mt-md">
+        <div class="col-12 col-sm-11 q-pa-sm dateBox text-h5">
+          DAY 3
+        </div>
+      </div>
+      <div class="row justify-center">
+        <div class="col-12 col-md-5 q-pa-sm text-h6">
+          <div>
+            <span class="scheduleTime">
+              09:00 - 12:00
+            </span>
+            <span class="scheduleAct">
+              Visit the EAR site (selected participants)
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sectLast" ref="otherInfo" class="sect q-py-md">
       <div class="row justify-center items-start content-center q-mt-md">
         <div class="col-12 col-sm-4 q-pa-sm text-body1">
           <div>Organized by:</div>
@@ -231,7 +387,7 @@
           </div>
           <div class="q-mt-sm">Related Link:</div>
           <div class="text-weight-bold">
-            <a href="http://www.rish.kyoto-u.ac.jp/arn6/">
+            <a href="http://www.rish.kyoto-u.ac.jp/arn6/" target="_blank">
               www.rish.kyoto-u.ac.jp/arn6/
             </a>
           </div>
@@ -239,35 +395,104 @@
         <div class="col-12 col-sm-4 q-pa-sm text-body1">
           <div>contact:</div>
           <div class="text-weight-bold">
-            <a href="mailto:increase@lapan.go.id">
+            <a href="mailto:increase@lapan.go.id" target="_blank">
               <q-icon name="mdi-email-box" /> increase@lapan.go.id
             </a>
           </div>
           <div class="q-mt-md">resources:</div>
           <div class="text-caption">
-            <a href="http://www.rish.kyoto-u.ac.jp">www.rish.kyoto-u.ac.jp</a>
+            <a href="http://www.rish.kyoto-u.ac.jp" target="_blank">
+              www.rish.kyoto-u.ac.jp
+            </a>
             <br />
-            <a href="http://psta.lapan.go.id">psta.lapan.go.id</a>
+            <a href="http://psta.lapan.go.id" target="_blank">
+              psta.lapan.go.id
+            </a>
             <br />
-            <a href="https://www.freepik.com/vectors/business">
+            <a href="https://www.freepik.com/vectors/business" target="_blank">
               Business vector created by vectorjuice - www.freepik.com
             </a>
             <br />
-            <a href="https://www.freepik.com/photos/calendar">
+            <a href="https://www.freepik.com/photos/calendar" target="_blank">
               Calendar photo created by rawpixel.com - www.freepik.com
             </a>
+            <a href="https://www.freepik.com/photos/technology" target="_blank"
+              >Technology photo created by pressfoto - www.freepik.com</a
+            >
           </div>
         </div>
         <div class="col-12 col-sm-4 q-pa-sm text-body1">
-          <a href="https://info.flagcounter.com/MASZ"
-            ><img
+          <a href="https://info.flagcounter.com/MASZ">
+            <img
               src="https://s01.flagcounter.com/countxl/MASZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
               alt="Flag Counter"
               border="0"
-          /></a>
+            />
+          </a>
         </div>
       </div>
     </div>
+    <q-page-sticky position="top-right" :offset="[18, 18]" class="desktop-only">
+      <q-fab
+        v-model="fab1"
+        label="section"
+        glossy
+        color="purple"
+        icon="keyboard_arrow_down"
+        direction="down"
+        vertical-actions-align="right"
+      >
+        <template v-for="(item, index) in floatingButton">
+          <q-fab-action
+            :key="index"
+            :label="item.label"
+            :color="item.color"
+            @click="scrollToElement(item.scrollTo)"
+          >
+            <q-badge
+              v-if="isUpdate(item.updateDate)"
+              color="red"
+              label="update"
+              floating
+            />
+          </q-fab-action>
+        </template>
+      </q-fab>
+    </q-page-sticky>
+    <q-page-sticky
+      position="bottom-right"
+      :offset="[18, 18]"
+      class="mobile-only"
+    >
+      <q-fab
+        ref="mobileFab"
+        :persistent="true"
+        v-model="fab1"
+        label="section"
+        glossy
+        color="purple"
+        icon="keyboard_arrow_up"
+        direction="up"
+        vertical-actions-align="right"
+        @hide="preventFabHide('mobileFab')"
+      >
+        <template v-for="(item, index) in floatingButton.slice().reverse()">
+          <q-fab-action
+            :key="index"
+            :label="item.label"
+            :color="item.color"
+            @click="scrollToElement(item.scrollTo)"
+          >
+            <q-badge
+              v-if="isUpdate(item.updateDate)"
+              color="red"
+              label="update"
+              floating
+            />
+          </q-fab-action>
+        </template>
+      </q-fab>
+    </q-page-sticky>
   </q-page>
 </template>
 <style scoped>
@@ -295,6 +520,14 @@
   background-position: center;
   /* min-height: 400px; */
 }
+#sect5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 7)),
+    url("~assets/img/rundown.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $text-white;
+}
 
 .sect {
   min-height: 200px;
@@ -306,6 +539,10 @@
 
 <script>
 import { Flipped } from "vue-flip-toolkit";
+import { scroll } from "quasar";
+const { getScrollTarget, setScrollPosition } = scroll;
+import { DateTime as LuxonDT } from "luxon";
+
 export default {
   // meta: {
   //   meta: {
@@ -314,10 +551,119 @@ export default {
   // },
   layout: "Empty",
   name: "PageIndex",
+  data() {
+    return {
+      fab1: true,
+      forceCloseFab: false,
+      floatingButton: [
+        {
+          label: "About The Confrence",
+          color: "primary",
+          scrollTo: "about",
+          hasUpdate: false,
+          updateDate: ""
+        },
+        {
+          label: "Important Dates",
+          color: "secondary",
+          scrollTo: "importantDates",
+          hasUpdate: false,
+          updateDate: ""
+        },
+        {
+          label: "Speakers",
+          color: "accent",
+          scrollTo: "keyNoteSpeaker",
+          hasUpdate: true,
+          updateDate: "2021-04-30"
+        },
+        {
+          label: "Schedule",
+          color: "dark",
+          scrollTo: "schedule",
+          hasUpdate: true,
+          updateDate: "2021-04-30"
+        },
+        {
+          label: "Contact",
+          color: "secondary",
+          scrollTo: "otherInfo",
+          hasUpdate: false,
+          updateDate: ""
+        }
+      ],
+      updateDay: 7,
+      scheduleDay1: [],
+      scheduleDay2: []
+    };
+  },
   components: {
     // Flipped
   },
+  methods: {
+    scrollToElement(refId) {
+      this.forceCloseFab = false;
+      const el = this.$refs[refId];
+      const target = getScrollTarget(el);
+      const offset = el.offsetTop;
+      const duration = 500;
+      setScrollPosition(target, offset, duration);
+    },
+    preventFabHide(fabName) {
+      return;
+      console.log("PREV HIDE?", this.forceCloseFab);
+      if (this.forceCloseFab === false) {
+        this.$refs[fabName].show();
+      }
+    },
+    fabClicked(fabName) {
+      this.forceCloseFab = true;
+      // this.$refs[fabName].toggle();
+    },
+    isUpdate(date) {
+      let diff = 999;
+      try {
+        // console.log(LuxonDT)
+        const start = LuxonDT.fromISO(date);
+        const end = LuxonDT.now();
+        diff = end.diff(start, "days");
+      } catch (err) {
+        console.log(err);
+      }
+      console.log("IS DIFF", diff);
+      return diff < 7;
+    },
+    chunkArray(arr, n) {
+      var chunkLength = Math.max(arr.length / n, 1);
+      var chunks = [];
+      for (var i = 0; i < n; i++) {
+        if (chunkLength * (i + 1) <= arr.length)
+          chunks.push(arr.slice(chunkLength * i, chunkLength * (i + 1)));
+      }
+      return chunks;
+    }
+  },
   mounted() {
+    const t = this;
+    this.$axios
+      .get("scheduleDay1.json")
+      .then(res => {
+        console.log(res.data);
+        t.scheduleDay1 = res.data;
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
+    this.$axios
+      .get("scheduleDay2.json")
+      .then(res => {
+        console.log(res.data);
+        t.scheduleDay2 = res.data;
+      })
+      .catch(err => {
+        console.log(err);
+      });
     // const L = require("leaflet");
     // require("leaflet/dist/leaflet.css");
     // delete L.Icon.Default.prototype._getIconUrl;

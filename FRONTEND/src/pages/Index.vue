@@ -444,9 +444,15 @@
             media="https://ear20.lapan.go.id/img/radar.7d21f604.gif"
             style="text-decoration:none"
           >
-            <q-btn class="q-ma-sm" icon="mdi-facebook" label="share on facebook" style="background-color:#3b5998" text-color="white"></q-btn>
+            <q-btn
+              class="q-ma-sm"
+              icon="mdi-facebook"
+              label="share on facebook"
+              style="background-color:#3b5998"
+              text-color="white"
+            ></q-btn>
           </ShareNetwork>
-
+          <br />
           <ShareNetwork
             network="twitter"
             url="https://ear20.lapan.go.id"
@@ -460,8 +466,37 @@
             media="https://ear20.lapan.go.id/img/radar.7d21f604.gif"
             style="text-decoration:none"
           >
-            <q-btn class="q-ma-sm" icon="mdi-twitter" label="share on twitter" style="background-color:#00acee" text-color="white"></q-btn>
+            <q-btn
+              class="q-ma-sm"
+              icon="mdi-twitter"
+              label="share on twitter"
+              style="background-color:#00acee"
+              text-color="white"
+            ></q-btn>
           </ShareNetwork>
+          <br />
+          <ShareNetwork
+            network="whatsapp"
+            url="https://ear20.lapan.go.id"
+            title="Ear 20th Anniversary"
+            description="Equatorial Atmosphere Radar (EAR) 
+  20th Anniversary
+  LAPAN - Kyoto University 
+  International Symposium for Equatorial Atmosphere"
+            quote="Joint program of INternational Conference on Radioscience, Equatorial Atmospheric Science and Environment (INCREASE) and The 6th Asia Research Node (ARN) Symposium on Humanosphere Science"
+            hashtags="ear20anniversary,lapan,increase,seminar"
+            media="https://ear20.lapan.go.id/img/radar.7d21f604.gif"
+            style="text-decoration:none"
+          >
+            <q-btn
+              class="q-ma-sm"
+              icon="mdi-whatsapp"
+              label="share on whatsapp"
+              style="background-color:#25d366"
+              text-color="white"
+            ></q-btn>
+          </ShareNetwork>
+          <br />
           <a href="https://info.flagcounter.com/MASZ">
             <img
               src="https://s01.flagcounter.com/countxl/MASZ/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"

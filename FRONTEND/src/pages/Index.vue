@@ -212,9 +212,7 @@
           <div class="text-h6">
             <ul>
               <li>
-                Prof. Shigeo Yoden (Kyoto Univ, Japan)<span class="text-red">
-                  *
-                </span>
+                Prof. Shigeo Yoden (Kyoto Univ, Japan)
               </li>
               <li>
                 Prof. J.Y. Liu (NCU, Taiwan)<span class="text-red">*</span>
@@ -242,15 +240,10 @@
               </li>
               <li>Dr. Marzuki (Andalas Univ, Indonesia)</li>
               <li>
-                Dr. Yasunobu Miyoshi (Kyoto Univ, Japan)<span class="text-red">
-                  *
-                </span>
+                Dr. Yasunobu Miyoshi (Kyoto Univ, Japan)
               </li>
               <li>
                 Prof. Manabu D. Yamanaka (Kyoto Univ, Japan)
-                <span class="text-red">
-                  *
-                </span>
               </li>
               <li>Prof. Ninong Komala (LAPAN, Indonesia)</li>
               <li>

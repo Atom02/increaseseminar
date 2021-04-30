@@ -702,7 +702,9 @@ export default {
         // console.log(LuxonDT)
         const start = LuxonDT.fromISO(date);
         const end = LuxonDT.now();
-        diff = end.diff(start, "days");
+        const tmpdif = end.diff(start, "days");
+        diff = tmpdif.toObject().days
+        // console.log(diff)
       } catch (err) {
         console.log(err);
       }

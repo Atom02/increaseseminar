@@ -90,6 +90,14 @@
               Engineering, Agriculture, Ocean Science, etc
             </span>
           </p>
+          <p>
+            <q-btn
+              size="xl"
+              style="background: #FF0080; color: white" 
+              @click="openhref('https://easychair.org/cfp/INCREASEand6thARN')"
+              label="More Info"
+            />
+          </p>
         </div>
       </div>
       <!-- <div class="row justify-center items-center content-center q-mt-md">
@@ -165,6 +173,12 @@
         </div>
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
           Abstract submission
+          <q-btn
+              size="xl"
+              style="background: #FF0080; color: white"
+              @click="openhref('https://easychair.org/conferences/?conf=increaseand6tharn')"
+              label="SUBMIT NOW!!!"
+            />
           <q-separator class="xs" color="white" />
         </div>
       </div>
@@ -252,7 +266,7 @@
                   *
                 </span>
               </li>
-              <li>Dr. Acep Purqon (ITERA, Indonesia)</li>
+              <li>Dr. Acep Purqon (ITB dan ITERA, Indonesia)</li>
             </ul>
           </div>
         </div>
@@ -347,6 +361,7 @@
             </span>
           </div>
         </div>
+        <div class="col-12 col-md-5 q-pa-sm text-h6">&nbsp;</div>
       </div>
     </div>
     <div id="sectLast" ref="otherInfo" class="sect q-py-md">
@@ -607,10 +622,9 @@
 
 <script>
 import { Flipped } from "vue-flip-toolkit";
-import { scroll } from "quasar";
+import { scroll, openURL } from "quasar";
 const { getScrollTarget, setScrollPosition } = scroll;
 import { DateTime as LuxonDT } from "luxon";
-
 // Vue.use(VueSocialSharing);
 export default {
   // meta: {
@@ -630,14 +644,14 @@ export default {
           color: "primary",
           scrollTo: "about",
           hasUpdate: false,
-          updateDate: ""
+          updateDate: "2021-05-03"
         },
         {
           label: "Important Dates",
           color: "secondary",
           scrollTo: "importantDates",
           hasUpdate: false,
-          updateDate: "2021-04-30"
+          updateDate: "2021-05-03"
         },
         {
           label: "Speakers",
@@ -651,7 +665,7 @@ export default {
           color: "dark",
           scrollTo: "schedule",
           hasUpdate: true,
-          updateDate: "2021-04-30"
+          updateDate: "2021-05-03"
         },
         {
           label: "Contact",
@@ -678,9 +692,13 @@ export default {
       const duration = 500;
       setScrollPosition(target, offset, duration);
     },
+    openhref(url) {
+      // alert("GO TO " + url);
+      openURL(url);
+    },
     preventFabHide(fabName) {
       return;
-      console.log("PREV HIDE?", this.forceCloseFab);
+      // console.log("PREV HIDE?", this.forceCloseFab);
       if (this.forceCloseFab === false) {
         this.$refs[fabName].show();
       }
@@ -696,12 +714,12 @@ export default {
         const start = LuxonDT.fromISO(date);
         const end = LuxonDT.now();
         const tmpdif = end.diff(start, "days");
-        diff = tmpdif.toObject().days
+        diff = tmpdif.toObject().days;
         // console.log(diff)
       } catch (err) {
         console.log(err);
       }
-      console.log("IS DIFF", diff);
+      // console.log("IS DIFF", diff);
       return diff < 7;
     },
     chunkArray(arr, n) {
@@ -719,7 +737,7 @@ export default {
     this.$axios
       .get("scheduleDay1.json")
       .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         t.scheduleDay1 = res.data;
       })
       .catch(err => {
@@ -729,7 +747,7 @@ export default {
     this.$axios
       .get("scheduleDay2.json")
       .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         t.scheduleDay2 = res.data;
       })
       .catch(err => {

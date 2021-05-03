@@ -254,7 +254,7 @@
               </li>
               <li>Dr. Marzuki (Andalas Univ, Indonesia)</li>
               <li>
-                Dr. Yasunobu Miyoshi (Kyoto Univ, Japan)
+                Dr. Yasunobu Miyoshi (Kyushu, Japan)
               </li>
               <li>
                 Prof. Manabu D. Yamanaka (Kyoto Univ, Japan)

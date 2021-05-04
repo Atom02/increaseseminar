@@ -93,7 +93,7 @@
           <p>
             <q-btn
               size="xl"
-              style="background: #FF0080; color: white" 
+              style="background: #FF0080; color: white"
               @click="openhref('https://easychair.org/cfp/INCREASEand6thARN')"
               label="More Info"
             />
@@ -174,11 +174,15 @@
         <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
           Abstract submission
           <q-btn
-              size="xl"
-              style="background: #FF0080; color: white"
-              @click="openhref('https://easychair.org/conferences/?conf=increaseand6tharn')"
-              label="SUBMIT NOW!!!"
-            />
+            size="xl"
+            style="background: #FF0080; color: white"
+            @click="
+              openhref(
+                'https://easychair.org/conferences/?conf=increaseand6tharn'
+              )
+            "
+            label="SUBMIT NOW!!!"
+          />
           <q-separator class="xs" color="white" />
         </div>
       </div>
@@ -240,12 +244,7 @@
           <div class="text-h6">
             <ul>
               <li>Prof. Hiroyuki Hashiguchi (Kyoto Univ, Japan)</li>
-              <li>
-                Ir. Mujtahid, M.T. (LAPAN, Indonesia)
-                <span class="text-red">
-                  *
-                </span>
-              </li>
+              <li>Dr. Wahyudi Hasbi (LAPAN, Indonesia)</li>
               <li>
                 Prof. Tsuyoshi Yoshimura (Kyoto Univ, Japan)
                 <span class="text-red">

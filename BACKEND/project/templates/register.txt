@@ -1,0 +1,10 @@
+Thank You For Registering
+as Participant on Ear 20th Anniversary
+
+Dear {{ name }} from {{ country }},
+You are successfully regeisterd for Joint program of International Conference on Radioscience, Equatorial Atmospheric Science and Environment (INCREASE) and The 6th Asia Research Node (ARN) Symposium on Humanosphere Science
+
+
+for mor information, please visit https://ear20.lapan.go.id
+
+DO NOT REPLY TO THIS EMAIL, please contact us at https://ear20.lapan.go.id

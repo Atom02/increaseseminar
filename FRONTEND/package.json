@@ -12,8 +12,10 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "axios": "^0.18.1",
+    "axios-cache-adapter": "^2.7.3",
     "core-js": "^3.6.5",
     "leaflet": "^1.7.1",
+    "lodash": "^4.17.21",
     "luxon": "^1.26.0",
     "quasar": "^1.0.0",
     "vue-flip-toolkit": "^1.6.0",

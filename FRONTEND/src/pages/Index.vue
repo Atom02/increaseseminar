@@ -54,7 +54,7 @@
     </div>
     <div id="sect2" ref="about" class="sect q-py-md">
       <div class="row justify-center items-start content-center q-mt-md">
-        <div class="gt-xs col-sm-5 q-pa-sm q-px-lg text-right">
+        <div class="gt-xs col-sm-4 q-pa-sm q-px-lg text-right">
           <q-img
             class=""
             src="~assets/img/groupp.png"
@@ -72,7 +72,7 @@
             />
           </center>
         </div>
-        <div class="col-12 col-sm-5 q-pa-sm q-pt-xl q-px-lg">
+        <div class="col-12 col-md-6 q-pa-sm q-pt-xl q-px-lg">
           <div class="text-h4">About The Conference</div>
           <p class="text-body1">
             Joint program of INternational Conference on Radioscience,
@@ -90,13 +90,22 @@
               Engineering, Agriculture, Ocean Science, etc
             </span>
           </p>
-          <p>
+          <p ref="register">
             <q-btn
-              size="xl"
+              size="lg"
               style="background: #FF0080; color: white"
               @click="openhref('https://easychair.org/cfp/INCREASEand6thARN')"
-              label="More Info"
-            />
+              label="Submit Abstract"
+              class="q-mr-md"
+            ></q-btn>
+            <span style="display:inline-block;" class="q-mr-md">OR</span>
+            <q-btn
+              size="lg"
+              flat
+              label="join as participant"
+              style="color:#FF0080"
+              @click="openDialog"
+            ></q-btn>
           </p>
         </div>
       </div>
@@ -149,32 +158,33 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
+        <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
           15 March 2021
         </div>
-        <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
+        <div class="col-11 col-md-7 text-white text-h5 q-pa-sm">
           First announcement
           <q-separator class="xs" color="white" />
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
+        <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
           <s style="color:#ff8639">15 April 2021</s>
           30 April 2021
         </div>
-        <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
+        <div class="col-11 col-md-7 text-white text-h5 q-pa-sm">
           Second announcement
           <q-separator class="xs" color="white" />
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
+        <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
           1 May - 15 July 2021
         </div>
-        <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
+        <div class="col-11 col-md-7 text-white text-h5 q-pa-sm">
           Abstract submission
           <q-btn
-            size="xl"
+            class="q-ml-md"
+            size="lg"
             style="background: #FF0080; color: white"
             @click="
               openhref(
@@ -187,19 +197,19 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
+        <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
           20 September 2021
         </div>
-        <div class="col-11 col-sm-7 text-white text-h5 q-pa-sm">
+        <div class="col-11 col-md-7 text-white text-h5 q-pa-sm">
           Full Paper Submission
           <q-separator class="xs" color="white" />
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
-        <div class="col-11 col-sm-3 text-white text-h5 q-pa-sm dateBox">
+        <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
           20 - 22 September 2021
         </div>
-        <div class="col-11 col-sm-7 text-white text-h5 q-px-none q-pt-none">
+        <div class="col-11 col-md-7 text-white text-h5 q-px-none q-pt-none">
           <!-- MAIN EVENT, <br /> -->
           <ul style="margin-top:0">
             <li>Ceremonial EAR 20th Anniversary</li>
@@ -225,7 +235,7 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-md">
-        <div class="col-12 col-md-5 q-pa-sm text-body1">
+        <div class="col-11 col-md-5 q-pa-sm text-body1">
           <div class="text-h5 text-primary">Keynote Speakers</div>
           <div class="text-h6">
             <ul>
@@ -239,7 +249,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-12 col-sm-5 q-pa-sm text-body1">
+        <div class="col-11 col-md-5 q-pa-sm text-body1">
           <div class="text-h5 text-primary">Invited Speakers</div>
           <div class="text-h6">
             <ul>
@@ -256,11 +266,11 @@
                 Dr. Yasunobu Miyoshi (Kyushu Univ, Japan)
               </li>
               <li>
-                Prof. Manabu D. Yamanaka (Kyoto Univ, Japan)
+                Prof. Manabu D. Yamanaka (Kobe Univ, Japan)
               </li>
               <li>Prof. Ninong Komala (LAPAN, Indonesia)</li>
               <li>
-                Dr. Takuya Tsugawa (Kyoto Univ, Japan)
+                Dr. Takuya Tsugawa (NICT, Japan)
                 <span class="text-red">
                   *
                 </span>
@@ -283,26 +293,30 @@
         </div>
       </div>
       <div class="row justify-center q-mt-md">
-        <div class="col-12 col-sm-11 q-pa-sm dateBox text-h5">
+        <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
           DAY 1
         </div>
       </div>
       <div class="row justify-center">
         <div class="col-12 col-md-5 q-pa-sm text-h6">
           <template v-for="(item, index) in chunkArray(scheduleDay1, 2)[0]">
-            <div :key="'d10' + index">
+            <div :key="'d10' + index" class="q-mb-sm">
               <span class="scheduleTime">
                 {{ item.time }}
               </span>
               <span class="scheduleAct">
                 {{ item.act }}
+                <template v-if="'sub' in item">
+                  <br/>
+                  <span class="subAct text-h5">{{ item.sub }}</span>
+                </template>
               </span>
             </div>
           </template>
         </div>
         <div class="col-12 col-md-5 q-pa-sm text-h6">
           <template v-for="(item, index) in chunkArray(scheduleDay1, 2)[1]">
-            <div :key="'d11' + index">
+            <div :key="'d11' + index" class="q-mb-sm">
               <span class="scheduleTime">
                 {{ item.time }}
               </span>
@@ -314,14 +328,14 @@
         </div>
       </div>
       <div class="row justify-center q-mt-md">
-        <div class="col-12 col-sm-11 q-pa-sm dateBox text-h5">
+        <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
           DAY 2 (Paralel Session)
         </div>
       </div>
       <div class="row justify-center">
         <div class="col-12 col-md-5 q-pa-sm text-h6">
           <template v-for="(item, index) in chunkArray(scheduleDay2, 2)[0]">
-            <div :key="'d10' + index">
+            <div :key="'d10' + index" class="q-mb-sm">
               <span class="scheduleTime">
                 {{ item.time }}
               </span>
@@ -333,7 +347,7 @@
         </div>
         <div class="col-12 col-md-5 q-pa-sm text-h6">
           <template v-for="(item, index) in chunkArray(scheduleDay2, 2)[1]">
-            <div :key="'d11' + index">
+            <div :key="'d11' + index" class="q-mb-sm">
               <span class="scheduleTime">
                 {{ item.time }}
               </span>
@@ -345,13 +359,13 @@
         </div>
       </div>
       <div class="row justify-center q-mt-md">
-        <div class="col-12 col-sm-11 q-pa-sm dateBox text-h5">
+        <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
           DAY 3
         </div>
       </div>
       <div class="row justify-center">
         <div class="col-12 col-md-5 q-pa-sm text-h6">
-          <div>
+          <div class="q-mb-sm">
             <span class="scheduleTime">
               09:00 - 12:00
             </span>
@@ -514,6 +528,137 @@
         </div>
       </div>
     </div>
+    <q-dialog
+      v-model="dialog"
+      persistent
+      :maximized="maximizedToggle"
+      transition-show="slide-up"
+      transition-hide="slide-down"
+    >
+      <q-card style="min-width: 50vw;">
+        <q-bar class="bg-primary text-white">
+          <q-space />
+          <q-btn dense flat icon="close" v-close-popup>
+            <q-tooltip content-class="bg-white text-primary">Close</q-tooltip>
+          </q-btn>
+        </q-bar>
+
+        <q-card-section>
+          <div class="text-h6">Register as Participant</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-form
+            @submit="register"
+            class="q-gutter-md"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="off"
+          >
+            <div class="row">
+              <div class="col-12">
+                <q-input
+                  v-model="participantForm.name"
+                  label="Full Name *"
+                  :rules="[
+                    val => (val && val.length > 0) || 'Please type something'
+                  ]"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="off"
+                  lazy-rules
+                ></q-input>
+                <q-input
+                  v-model="participantForm.email"
+                  type="email"
+                  label="Email *"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="off"
+                  :rules="[
+                    val => !!val || 'Please Type a Valid Email',
+                    isValidEmail
+                  ]"
+                  lazy-rules
+                  ref="formemail"
+                  @focus="clearFieldError('email')"
+                  :error="isFieldError('email')"
+                  :error-message="getFieldError('email')"
+                ></q-input>
+                <q-input
+                  v-model="participantForm.aff"
+                  label="Affiliation *"
+                  :rules="[
+                    val =>
+                      (val && val.length > 0) ||
+                      'Please fill in Your Organization or University'
+                  ]"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="off"
+                  hint="Organization or University"
+                  lazy-rules
+                ></q-input>
+                <q-select
+                  class="q-mt-sm"
+                  clearable
+                  label="Nationality/Country of Origin *"
+                  filled
+                  v-model="participantForm.nationality"
+                  use-input
+                  hide-selected
+                  fill-input
+                  input-debounce="0"
+                  :options="countryList"
+                  @filter="filterFn"
+                  hint="Type To filter"
+                  lazy-rules
+                  :rules="[
+                    val => (val && val !== null) || 'Please Select One Option'
+                  ]"
+                >
+                  <template v-slot:no-option>
+                    <q-item>
+                      <q-item-section class="text-grey">
+                        No results
+                      </q-item-section>
+                    </q-item>
+                  </template>
+                </q-select>
+              </div>
+            </div>
+            <div class="row q-pt-lg">
+              <!-- <div class="col-2">
+              <q-btn
+                  @click="resendConfirmationEmail"
+                  color="primary"
+                  size="lg"
+                  flat
+                ></q-btn>
+              </div>                 -->
+              <div class="col-12">
+                <q-btn
+                  color="primary"
+                  size="lg"
+                  class="float-right"
+                  type="submit"
+                  label="Register As Participant"
+                >
+                </q-btn>
+                <q-btn
+                  @click="resetformregister"
+                  color="warning"
+                  size="lg"
+                  class="float-right"
+                  flat
+                  label="Cancel"
+                ></q-btn>
+              </div>
+            </div>
+          </q-form>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
     <q-page-sticky position="top-right" :offset="[18, 18]" class="desktop-only">
       <q-fab
         v-model="fab1"
@@ -529,7 +674,7 @@
             :key="index"
             :label="item.label"
             :color="item.color"
-            @click="scrollToElement(item.scrollTo)"
+            @click="scrollToElement(item.scrollTo, item.negativeOffset)"
           >
             <q-badge
               v-if="isUpdate(item.updateDate)"
@@ -563,7 +708,7 @@
             :key="index"
             :label="item.label"
             :color="item.color"
-            @click="scrollToElement(item.scrollTo)"
+            @click="scrollToElement(item.scrollTo, item.negativeOffset)"
           >
             <q-badge
               v-if="isUpdate(item.updateDate)"
@@ -620,10 +765,14 @@
 </style>
 
 <script>
+import _ from "lodash";
 import { Flipped } from "vue-flip-toolkit";
-import { scroll, openURL } from "quasar";
+import { scroll, openURL, Cookies, Notify } from "quasar";
 const { getScrollTarget, setScrollPosition } = scroll;
 import { DateTime as LuxonDT } from "luxon";
+
+var value = Cookies.get("cookie_name");
+
 // Vue.use(VueSocialSharing);
 export default {
   // meta: {
@@ -639,55 +788,102 @@ export default {
       forceCloseFab: false,
       floatingButton: [
         {
+          label: "Register",
+          color: "positive",
+          scrollTo: "register",
+          hasUpdate: false,
+          updateDate: "2021-05-11",
+          negativeOffset: -150
+        },
+        {
           label: "About The Confrence",
           color: "primary",
           scrollTo: "about",
           hasUpdate: false,
-          updateDate: "2021-05-03"
+          updateDate: "2021-05-11",
+          negativeOffset: 0
         },
         {
           label: "Important Dates",
           color: "secondary",
           scrollTo: "importantDates",
           hasUpdate: false,
-          updateDate: "2021-05-03"
+          updateDate: "2021-05-03",
+          negativeOffset: 0
         },
         {
           label: "Speakers",
           color: "accent",
           scrollTo: "keyNoteSpeaker",
           hasUpdate: true,
-          updateDate: "2021-04-30"
+          updateDate: "2021-05-11",
+          negativeOffset: 0
         },
         {
           label: "Schedule",
           color: "dark",
           scrollTo: "schedule",
           hasUpdate: true,
-          updateDate: "2021-05-03"
+          updateDate: "2021-05-03",
+          negativeOffset: 0
         },
         {
           label: "Contact",
           color: "secondary",
           scrollTo: "otherInfo",
           hasUpdate: false,
-          updateDate: ""
+          updateDate: "",
+          negativeOffset: 0
         }
       ],
       updateDay: 7,
       scheduleDay1: [],
-      scheduleDay2: []
+      scheduleDay2: [],
+      dialog: false,
+      maximizedToggle: false,
+      participantFormErrors: {},
+      participantForm: {
+        name: null,
+        email: null,
+        aff: null,
+        nationality: null
+      },
+      countryList: [],
+      countryListimt: []
     };
   },
   components: {
     // Flipped
   },
   methods: {
-    scrollToElement(refId) {
+    filterFn(val, update) {
+      const t = this;
+      if (val === "") {
+        update(() => {
+          this.countryList = this.countryListimt;
+
+          // with Quasar v1.7.4+
+          // here you have access to "ref" which
+          // is the Vue reference of the QSelect
+        });
+        return;
+      }
+
+      update(() => {
+        const needle = val.toLowerCase();
+        // this.countryList = this.countryListimt.filter(
+        //   v => v.toLowerCase().indexOf(needle) > -1
+        // );
+        this.countryList = _.filter(t.countryListimt, function(o) {
+          return o.label.toLowerCase().indexOf(needle) > -1;
+        });
+      });
+    },
+    scrollToElement(refId, ofs) {
       this.forceCloseFab = false;
       const el = this.$refs[refId];
       const target = getScrollTarget(el);
-      const offset = el.offsetTop;
+      const offset = el.offsetTop - (30 - ofs);
       const duration = 500;
       setScrollPosition(target, offset, duration);
     },
@@ -729,10 +925,117 @@ export default {
           chunks.push(arr.slice(chunkLength * i, chunkLength * (i + 1)));
       }
       return chunks;
+    },
+    isValidEmail(val) {
+      const emailPattern = /^(?=[a-zA-Z0-9@._%+-]{6,254}$)[a-zA-Z0-9._%+-]{1,64}@(?:[a-zA-Z0-9-]{1,63}\.){1,8}[a-zA-Z]{2,63}$/;
+      return emailPattern.test(val) || "Invalid email";
+    },
+    async openDialog() {
+      await this.$api("/site/");
+      this.dialog = true;
+    },
+    register() {
+      // console.log(this.participantForm);
+      console.log("EVERYTHING IS GOOD");
+      console.log(this.participantForm);
+      console.log("CSRF", Cookies.get("CSRF-TOKEN"));
+      const bodyFormData = new FormData();
+      bodyFormData.append("name", this.participantForm.name);
+      bodyFormData.append("email", this.participantForm.email);
+      bodyFormData.append("affiliation", this.participantForm.aff);
+      bodyFormData.append("nationality", this.participantForm.nationality.id);
+      const t = this;
+      t.$api({
+        method: "post",
+        url: "/peserta/register",
+        data: bodyFormData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          "X-CSRF-TOKEN": Cookies.get("CSRF-TOKEN")
+        }
+      })
+        .then(function(response) {
+          //handle success
+          console.log(response);
+          const res = response.data;
+          const status = res.status;
+          if (status == true) {
+            t.$q.notify({
+              type: "positive",
+              message:
+                "Registration Complete <br/> Check Your Email (inbox and spam folder) For Registration Confirmation <br/> Check This Website And Your Emails From Time To Time For Updates",
+              position: "center",
+              progress: true,
+              html: true
+            });
+            // setTimeout(() => {
+            //   if (t.dialog == true) {
+                t.dialog = false;
+            //   }
+            // }, 5000);
+          } else {
+            _.forEach(res.errors, (v, k) => {
+              t.participantFormErrors[k] = v;
+              // const el = t.$refs["form" + v];
+            });
+            console.log(t.participantFormErrors)
+          }
+        })
+        .catch(function(response) {
+          //handle error
+          console.log(response);
+        });
+    },
+    isFieldError(fi) {
+      if (this.participantFormErrors[fi] !== null) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    getFieldError(fi) {
+      if (this.participantFormErrors[fi] !== null) {
+        return this.participantFormErrors[fi];
+      } else {
+        return "";
+      }
+    },
+    clearFieldError(fi){
+      this.participantFormErrors[fi]=null
+    },
+    resetformregister() {
+      // this.participantForm = {
+      //   name: "",
+      //   email: "",
+      //   aff: "",
+      //   nationality: ""
+      // };
+      this.dialog = false;
     }
   },
   mounted() {
     const t = this;
+
+    this.$api
+      .get("/country/getall/")
+      .then(res => {
+        console.log(res);
+        const tmpCountry = [];
+        // console.log(res.data)
+        _.forEach(res.data, function(v, k) {
+          tmpCountry.push(v);
+        });
+        t.countryList = tmpCountry;
+        t.countryListimt = tmpCountry;
+        const fnd = _.filter(t.countryListimt, function(o) {
+          return o.label.toLowerCase().indexOf("ind") > -1;
+        });
+        console.log(fnd);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+
     this.$axios
       .get("scheduleDay1.json")
       .then(res => {
@@ -752,6 +1055,25 @@ export default {
       .catch(err => {
         console.log(err);
       });
+
+    if (this.$q.screen.lt.md) {
+      this.maximizedToggle = true;
+    } else {
+      console.log("IS BIG");
+    }
+
+    this.participantFormErrors = _.cloneDeep(this.participantForm);
+    // this.participantForm = {
+    //   name: "Candra Nur Ihsan",
+    //   email: "candra.nurihsan9@gmail.com",
+    //   aff: "LAPAN",
+    //   nationality: {
+    //     id: 100,
+    //     label: "Indonesia (ID)",
+    //     nicename: "Indonesia"
+    //   }
+    // };
+
     // const L = require("leaflet");
     // require("leaflet/dist/leaflet.css");
     // delete L.Icon.Default.prototype._getIconUrl;

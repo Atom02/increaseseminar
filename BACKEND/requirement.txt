@@ -11,3 +11,4 @@ pip install flask-sqlalchemy
 pip install Flask-Migrate
 pip install flask-cors
 pip install Flask-Mail
+pip install pymysql

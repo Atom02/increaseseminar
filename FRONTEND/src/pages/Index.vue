@@ -307,7 +307,7 @@
               <span class="scheduleAct">
                 {{ item.act }}
                 <template v-if="'sub' in item">
-                  <br/>
+                  <br />
                   <span class="subAct text-h5">{{ item.sub }}</span>
                 </template>
               </span>
@@ -546,8 +546,7 @@
         <q-card-section>
           <div class="text-h6">Register as Participant</div>
         </q-card-section>
-
-        <q-card-section class="q-pt-none">
+        <q-card-section class="q-pt-md">
           <q-form
             @submit="register"
             class="q-gutter-md"
@@ -567,6 +566,7 @@
                   autocapitalize="off"
                   autocomplete="off"
                   lazy-rules
+                  :disable="registerLoading == true"
                 ></q-input>
                 <q-input
                   v-model="participantForm.email"
@@ -584,6 +584,7 @@
                   @focus="clearFieldError('email')"
                   :error="isFieldError('email')"
                   :error-message="getFieldError('email')"
+                  :disable="registerLoading == true"
                 ></q-input>
                 <q-input
                   v-model="participantForm.aff"
@@ -598,6 +599,7 @@
                   autocomplete="off"
                   hint="Organization or University"
                   lazy-rules
+                  :disable="registerLoading == true"
                 ></q-input>
                 <q-select
                   class="q-mt-sm"
@@ -616,6 +618,7 @@
                   :rules="[
                     val => (val && val !== null) || 'Please Select One Option'
                   ]"
+                  :disable="registerLoading == true"
                 >
                   <template v-slot:no-option>
                     <q-item>
@@ -627,6 +630,18 @@
                 </q-select>
               </div>
             </div>
+            <!-- <div class="row q-pt-sm">
+              <div class="col-12">
+                <vue-recaptcha
+                  ref="recaptcha"
+                  @verify="onVerify"
+                  @expired="onExpired"
+                  sitekey="6Lc4rM8aAAAAABWLxAFOSpaRhSHJhshyWA_Kg55P"
+                  :loadRecaptchaScript="true"
+                >
+                </vue-recaptcha>
+              </div>
+            </div> -->
             <div class="row q-pt-lg">
               <!-- <div class="col-2">
               <q-btn
@@ -639,16 +654,22 @@
               <div class="col-12">
                 <q-btn
                   color="primary"
-                  size="lg"
+                  size="md"
                   class="float-right"
                   type="submit"
                   label="Register As Participant"
+                  :loading="registerLoading"
                 >
+                  <template v-slot:loading>
+                    <q-spinner-hourglass class="on-left" />
+                    Registering...
+                  </template>
                 </q-btn>
                 <q-btn
+                  v-if="registerLoading == false"
                   @click="resetformregister"
                   color="warning"
-                  size="lg"
+                  size="md"
                   class="float-right"
                   flat
                   label="Cancel"
@@ -763,16 +784,13 @@
   background-color: #ff6807;
 }
 </style>
-
 <script>
 import _ from "lodash";
 import { Flipped } from "vue-flip-toolkit";
 import { scroll, openURL, Cookies, Notify } from "quasar";
 const { getScrollTarget, setScrollPosition } = scroll;
 import { DateTime as LuxonDT } from "luxon";
-
-var value = Cookies.get("cookie_name");
-
+import VueRecaptcha from "vue-recaptcha";
 // Vue.use(VueSocialSharing);
 export default {
   // meta: {
@@ -782,6 +800,10 @@ export default {
   // },
   layout: "Empty",
   name: "PageIndex",
+  components: {
+    // Flipped
+    // "vue-recaptcha": VueRecaptcha
+  },
   data() {
     return {
       fab1: true,
@@ -848,12 +870,11 @@ export default {
         aff: null,
         nationality: null
       },
+      participantFormRobot: false,
+      registerLoading: false,
       countryList: [],
       countryListimt: []
     };
-  },
-  components: {
-    // Flipped
   },
   methods: {
     filterFn(val, update) {
@@ -934,57 +955,77 @@ export default {
       await this.$api("/site/");
       this.dialog = true;
     },
-    register() {
+    async register() {
       // console.log(this.participantForm);
-      console.log("EVERYTHING IS GOOD");
-      console.log(this.participantForm);
-      console.log("CSRF", Cookies.get("CSRF-TOKEN"));
-      const bodyFormData = new FormData();
-      bodyFormData.append("name", this.participantForm.name);
-      bodyFormData.append("email", this.participantForm.email);
-      bodyFormData.append("affiliation", this.participantForm.aff);
-      bodyFormData.append("nationality", this.participantForm.nationality.id);
       const t = this;
-      t.$api({
-        method: "post",
-        url: "/peserta/register",
-        data: bodyFormData,
-        headers: {
-          "Content-Type": "multipart/form-data",
-          "X-CSRF-TOKEN": Cookies.get("CSRF-TOKEN")
-        }
-      })
-        .then(function(response) {
-          //handle success
-          console.log(response);
-          const res = response.data;
-          const status = res.status;
-          if (status == true) {
-            t.$q.notify({
-              type: "positive",
-              message:
-                "Registration Complete <br/> Check Your Email (inbox and spam folder) For Registration Confirmation <br/> Check This Website And Your Emails From Time To Time For Updates",
-              position: "center",
-              progress: true,
-              html: true
-            });
-            // setTimeout(() => {
-            //   if (t.dialog == true) {
-                t.dialog = false;
-            //   }
-            // }, 5000);
-          } else {
-            _.forEach(res.errors, (v, k) => {
-              t.participantFormErrors[k] = v;
-              // const el = t.$refs["form" + v];
-            });
-            console.log(t.participantFormErrors)
+      t.registerLoading = true;
+      // setTimeout(() => {
+      // console.log("TRIGGER TOKEN");
+      // t.$recaptcha("login").then(token => {
+        // console.log("captcha token", token);
+        // console.log("EVERYTHING IS GOOD");
+        // console.log(this.participantForm);
+        // console.log("CSRF", Cookies.get("CSRF-TOKEN"));
+        const bodyFormData = new FormData();
+        bodyFormData.append("name", t.participantForm.name);
+        bodyFormData.append("email", t.participantForm.email);
+        bodyFormData.append("affiliation", t.participantForm.aff);
+        bodyFormData.append("nationality", this.participantForm.nationality.id);
+
+        t.$api({
+          method: "post",
+          url: "/peserta/register",
+          data: bodyFormData,
+          headers: {
+            "Content-Type": "multipart/form-data",
+            "X-CSRF-TOKEN": Cookies.get("CSRF-TOKEN")
           }
         })
-        .catch(function(response) {
-          //handle error
-          console.log(response);
-        });
+          .then(function(response) {
+            //handle success
+            console.log(response);
+            const res = response.data;
+            const status = res.status;
+            if (status == true) {
+              t.$q.notify({
+                type: "positive",
+                message:
+                  "Registration Complete <br/> Check Your Email (inbox and spam folder) For Registration Confirmation <br/> Check This Website And Your Emails From Time To Time For Updates",
+                position: "center",
+                progress: true,
+                html: true
+              });
+              // setTimeout(() => {
+              //   if (t.dialog == true) {
+              t.dialog = false;
+              //   }
+              // }, 5000);
+            } else {
+              _.forEach(res.errors, (v, k) => {
+                t.participantFormErrors[k] = v;
+                // const el = t.$refs["form" + v];
+              });
+              console.log(t.participantFormErrors);
+            }
+          })
+          .catch(function(response) {
+            //handle error
+            console.log(response);
+          }).finally(()=>{
+            t.registerLoading=false
+          });
+      // });
+      // }, 10000);
+    },
+    onVerify(response) {
+      console.log(response);
+      if (response) {
+        this.participantFormRobot = true;
+      }
+    },
+    onExpired() {},
+    resetRecaptcha() {
+      this.$refs.recaptcha.reset(); // Direct call reset method
     },
     isFieldError(fi) {
       if (this.participantFormErrors[fi] !== null) {
@@ -1000,8 +1041,8 @@ export default {
         return "";
       }
     },
-    clearFieldError(fi){
-      this.participantFormErrors[fi]=null
+    clearFieldError(fi) {
+      this.participantFormErrors[fi] = null;
     },
     resetformregister() {
       // this.participantForm = {

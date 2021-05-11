@@ -56,7 +56,7 @@ app.config['CORS_ORIGINS'] = "*"
 app.config['SQLALCHEMY_DATABASE_URI'] = cfgLocal.mariadb
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SQLALCHEMY_ENGINE_OPTIONS']={ "pool_pre_ping" : True}
-app.config['DEBUG'] = True
+app.config['DEBUG'] = cfgLocal.appdebug
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config["ALLOWED_EXTENSIONS"] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])

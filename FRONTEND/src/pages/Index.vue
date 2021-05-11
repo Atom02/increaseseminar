@@ -1118,16 +1118,16 @@ export default {
     }
 
     this.participantFormErrors = _.cloneDeep(this.participantForm);
-    this.participantForm = {
-      name: "Candra Nur Ihsan",
-      email: "candra.nurihsan9@gmail.com",
-      aff: "LAPAN",
-      nationality: {
-        id: 100,
-        label: "Indonesia (ID)",
-        nicename: "Indonesia"
-      }
-    };
+    // this.participantForm = {
+    //   name: "Candra Nur Ihsan",
+    //   email: "candra.nurihsan9@gmail.com",
+    //   aff: "LAPAN",
+    //   nationality: {
+    //     id: 100,
+    //     label: "Indonesia (ID)",
+    //     nicename: "Indonesia"
+    //   }
+    // };
 
     // const L = require("leaflet");
     // require("leaflet/dist/leaflet.css");

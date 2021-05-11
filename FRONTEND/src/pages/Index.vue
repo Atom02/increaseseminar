@@ -955,65 +955,79 @@ export default {
       await this.$api("/site/");
       this.dialog = true;
     },
-    async register() {
+    register() {
       // console.log(this.participantForm);
       const t = this;
       t.registerLoading = true;
       // setTimeout(() => {
       // console.log("TRIGGER TOKEN");
       // t.$recaptcha("login").then(token => {
-        // console.log("captcha token", token);
-        // console.log("EVERYTHING IS GOOD");
-        // console.log(this.participantForm);
-        // console.log("CSRF", Cookies.get("CSRF-TOKEN"));
-        const bodyFormData = new FormData();
-        bodyFormData.append("name", t.participantForm.name);
-        bodyFormData.append("email", t.participantForm.email);
-        bodyFormData.append("affiliation", t.participantForm.aff);
-        bodyFormData.append("nationality", this.participantForm.nationality.id);
+      // console.log("captcha token", token);
+      // console.log("EVERYTHING IS GOOD");
+      // console.log(this.participantForm);
+      // console.log("CSRF", Cookies.get("CSRF-TOKEN"));
+      const bodyFormData = new FormData();
+      bodyFormData.append("name", t.participantForm.name);
+      bodyFormData.append("email", t.participantForm.email);
+      bodyFormData.append("affiliation", t.participantForm.aff);
+      bodyFormData.append("nationality", this.participantForm.nationality.id);
 
-        t.$api({
-          method: "post",
-          url: "/peserta/register",
-          data: bodyFormData,
-          headers: {
-            "Content-Type": "multipart/form-data",
-            "X-CSRF-TOKEN": Cookies.get("CSRF-TOKEN")
+      t.$api({
+        method: "post",
+        url: "/peserta/register",
+        data: bodyFormData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          "X-CSRF-TOKEN": Cookies.get("CSRF-TOKEN")
+        }
+      })
+        .then(function(response) {
+          //handle success
+          console.log(response);
+          const res = response.data;
+          const status = res.status;
+          if (status == true) {
+            // t.$q.notify({
+            //   type: "positive",
+            //   message:
+            //     "Registration Complete <br/> Check Your Email (inbox and spam folder) For Registration Confirmation <br/> Check This Website And Your Emails From Time To Time For Updates",
+            //   position: "center",
+            //   progress: true,
+            //   html: true
+            // });
+            t.$q.notify({
+              type: "positive",
+              message:
+                "Registration Complete <br/> Check Your Email (inbox and spam folder) For Registration Confirmation <br/> Check This Website And Your Emails From Time To Time For Updates",
+              position: "center",
+              progress: true,
+              html: true,
+              // closeBtn:true,
+              actions: [
+                { label: "Dismiss", color: "white", handler: () => {} }
+              ],
+              timeout: 10000
+            });
+            // setTimeout(() => {
+            //   if (t.dialog == true) {
+            t.dialog = false;
+            //   }
+            // }, 5000);
+          } else {
+            _.forEach(res.errors, (v, k) => {
+              t.participantFormErrors[k] = v;
+              // const el = t.$refs["form" + v];
+            });
+            console.log(t.participantFormErrors);
           }
         })
-          .then(function(response) {
-            //handle success
-            console.log(response);
-            const res = response.data;
-            const status = res.status;
-            if (status == true) {
-              t.$q.notify({
-                type: "positive",
-                message:
-                  "Registration Complete <br/> Check Your Email (inbox and spam folder) For Registration Confirmation <br/> Check This Website And Your Emails From Time To Time For Updates",
-                position: "center",
-                progress: true,
-                html: true
-              });
-              // setTimeout(() => {
-              //   if (t.dialog == true) {
-              t.dialog = false;
-              //   }
-              // }, 5000);
-            } else {
-              _.forEach(res.errors, (v, k) => {
-                t.participantFormErrors[k] = v;
-                // const el = t.$refs["form" + v];
-              });
-              console.log(t.participantFormErrors);
-            }
-          })
-          .catch(function(response) {
-            //handle error
-            console.log(response);
-          }).finally(()=>{
-            t.registerLoading=false
-          });
+        .catch(function(response) {
+          //handle error
+          console.log(response);
+        })
+        .finally(() => {
+          t.registerLoading = false;
+        });
       // });
       // }, 10000);
     },
@@ -1104,16 +1118,16 @@ export default {
     }
 
     this.participantFormErrors = _.cloneDeep(this.participantForm);
-    // this.participantForm = {
-    //   name: "Candra Nur Ihsan",
-    //   email: "candra.nurihsan9@gmail.com",
-    //   aff: "LAPAN",
-    //   nationality: {
-    //     id: 100,
-    //     label: "Indonesia (ID)",
-    //     nicename: "Indonesia"
-    //   }
-    // };
+    this.participantForm = {
+      name: "Candra Nur Ihsan",
+      email: "candra.nurihsan9@gmail.com",
+      aff: "LAPAN",
+      nationality: {
+        id: 100,
+        label: "Indonesia (ID)",
+        nicename: "Indonesia"
+      }
+    };
 
     // const L = require("leaflet");
     // require("leaflet/dist/leaflet.css");

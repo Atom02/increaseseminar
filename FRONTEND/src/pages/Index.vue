@@ -90,6 +90,11 @@
               Engineering, Agriculture, Ocean Science, etc
             </span>
           </p>
+          <p class="text-h5">
+            Selected paper will be published on <b class="text-red">SPRINGER PROCEEDINGS</b> in
+            Physics<br />
+            <span class="text-h5 text-red"><b>FREE OF CHARGE</b></span>
+          </p>
           <p ref="register">
             <q-btn
               size="lg"
@@ -255,12 +260,6 @@
             <ul>
               <li>Prof. Hiroyuki Hashiguchi (Kyoto Univ, Japan)</li>
               <li>Dr. Wahyudi Hasbi (LAPAN, Indonesia)</li>
-              <li>
-                Prof. Tsuyoshi Yoshimura (Kyoto Univ, Japan)
-                <span class="text-red">
-                  *
-                </span>
-              </li>
               <li>Dr. Marzuki (Andalas Univ, Indonesia)</li>
               <li>
                 Dr. Yasunobu Miyoshi (Kyushu Univ, Japan)
@@ -822,7 +821,7 @@ export default {
           color: "primary",
           scrollTo: "about",
           hasUpdate: false,
-          updateDate: "2021-05-11",
+          updateDate: "2021-05-20",
           negativeOffset: 0
         },
         {

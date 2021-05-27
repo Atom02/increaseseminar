@@ -269,10 +269,7 @@
               </li>
               <li>Prof. Ninong Komala (LAPAN, Indonesia)</li>
               <li>
-                Dr. Takuya Tsugawa (NICT, Japan)
-                <span class="text-red">
-                  *
-                </span>
+                Prof. Masatomo Fujiwara (Hokkaido Univ, Japan)
               </li>
               <li>Dr. Acep Purqon (ITB dan ITERA, Indonesia)</li>
             </ul>
@@ -837,7 +834,7 @@ export default {
           color: "accent",
           scrollTo: "keyNoteSpeaker",
           hasUpdate: true,
-          updateDate: "2021-05-11",
+          updateDate: "2021-05-26",
           negativeOffset: 0
         },
         {

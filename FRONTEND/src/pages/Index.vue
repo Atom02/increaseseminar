@@ -248,7 +248,7 @@
                 Prof. Shigeo Yoden (Kyoto Univ, Japan)
               </li>
               <li>
-                Prof. J.Y. Liu (NCU, Taiwan)<span class="text-red">*</span>
+                Prof. J.Y. Liu (NCU, Taiwan)
               </li>
               <li>Dr. Didi Satiadi (LAPAN, Indonesia)</li>
             </ul>
@@ -276,11 +276,11 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-12 text-red q-pa-sm text-h6">
           * to be confirmed
         </div>
-      </div>
+      </div> -->
     </div>
     <div id="sect5" ref="schedule" class="sect q-py-md text-white">
       <div class="row justify-center items-center content-center q-mt-md">

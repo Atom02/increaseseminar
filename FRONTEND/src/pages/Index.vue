@@ -814,7 +814,7 @@ export default {
           negativeOffset: -150
         },
         {
-          label: "About The Confrence",
+          label: "About The Conference",
           color: "primary",
           scrollTo: "about",
           hasUpdate: false,

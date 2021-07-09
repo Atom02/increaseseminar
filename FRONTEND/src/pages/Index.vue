@@ -272,6 +272,8 @@
                 Prof. Masatomo Fujiwara (Hokkaido Univ, Japan)
               </li>
               <li>Dr. Acep Purqon (ITB dan ITERA, Indonesia)</li>
+              <li>Prof. Toshiaki Umezawa (Kyoto University, Japan)</li>
+              <li>Prof. Sulaeman Yusuf (LIPI, Indonesia)</li>
             </ul>
           </div>
         </div>

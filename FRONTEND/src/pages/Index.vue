@@ -91,15 +91,15 @@
             </span>
           </p>
           <p class="text-h5">
-            Selected paper will be published on <b class="text-red">SPRINGER PROCEEDINGS</b> in
-            Physics<br />
+            Selected paper will be published on
+            <b class="text-red">SPRINGER PROCEEDINGS</b> in Physics<br />
             <span class="text-h5 text-red"><b>FREE OF CHARGE</b></span>
           </p>
           <p ref="register">
             <q-btn
               size="lg"
-              style="background: #FF0080; color: white"
-              @click="openhref('https://easychair.org/cfp/INCREASEand6thARN')"
+              style="background: #F0F0F0; color: grey"
+              disable
               label="Submit Abstract"
               class="q-mr-md"
             ></q-btn>
@@ -186,8 +186,8 @@
           1 May - 15 July 2021
         </div>
         <div class="col-11 col-md-7 text-white text-h5 q-pa-sm">
-          Abstract submission
-          <q-btn
+          <strike>Abstract submission</strike>&nbsp; <b>CLOSED</b>
+          <!-- <q-btn
             class="q-ml-md"
             size="lg"
             style="background: #FF0080; color: white"
@@ -197,7 +197,7 @@
               )
             "
             label="SUBMIT NOW!!!"
-          />
+          /> -->
           <q-separator class="xs" color="white" />
         </div>
       </div>
@@ -704,6 +704,13 @@
           </q-fab-action>
         </template>
       </q-fab>
+      <q-badge
+        color="red"
+        label="update"
+        floating
+        style="z-index:995"
+        v-if="isAnyUpdate"
+      />
     </q-page-sticky>
     <q-page-sticky
       position="bottom-right"
@@ -738,6 +745,13 @@
           </q-fab-action>
         </template>
       </q-fab>
+      <q-badge
+        color="red"
+        label="update"
+        floating
+        style="z-index:995"
+        v-if="isAnyUpdate"
+      />
     </q-page-sticky>
   </q-page>
 </template>
@@ -828,7 +842,7 @@ export default {
           color: "secondary",
           scrollTo: "importantDates",
           hasUpdate: false,
-          updateDate: "2021-05-03",
+          updateDate: "2021-07-18",
           negativeOffset: 0
         },
         {
@@ -873,6 +887,39 @@ export default {
       countryList: [],
       countryListimt: []
     };
+  },
+  computed: {
+    isAnyUpdate(){
+      const t = this;
+      // this.floatingButton.forEach((element, index, arr) => {
+      //   let cdate = isUpdate(element.updateDate)
+
+      // });
+      let up = false;
+      let diff = 9999;
+      for (const fb of t.floatingButton) {
+        // try {
+        //   // console.log(LuxonDT)
+        //   const start = LuxonDT.fromISO(fb.updateDate);
+        //   const end = LuxonDT.now();
+        //   const tmpdif = end.diff(start, "days");
+        //   diff = tmpdif.toObject().days;
+        //   // console.log(diff)
+        // } catch (err) {
+        //   console.log(err);
+        // }
+        // console.log("IS DIFF", diff);
+
+        // let cdate = diff < 7;
+        let cdate = t.isUpdate(fb.updateDate);
+        // console.log("UP? :", fb.label, cdate);
+        if (cdate == true) {
+          up = true;
+          break;
+        }
+      }
+      return up;
+    }
   },
   methods: {
     filterFn(val, update) {
@@ -936,6 +983,7 @@ export default {
       // console.log("IS DIFF", diff);
       return diff < 7;
     },
+
     chunkArray(arr, n) {
       var chunkLength = Math.max(arr.length / n, 1);
       var chunks = [];
@@ -1068,7 +1116,6 @@ export default {
   },
   mounted() {
     const t = this;
-
     this.$api
       .get("/country/getall/")
       .then(res => {

@@ -203,6 +203,15 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
+          31 July 2021
+        </div>
+        <div class="col-11 col-md-7 text-white text-h5 q-pa-sm">
+          Abstract Acceptance Announcement
+          <q-separator class="xs" color="white" />
+        </div>
+      </div>
+      <div class="row justify-center items-start content-center q-mt-lg">
+        <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
           20 September 2021
         </div>
         <div class="col-11 col-md-7 text-white text-h5 q-pa-sm">
@@ -842,7 +851,7 @@ export default {
           color: "secondary",
           scrollTo: "importantDates",
           hasUpdate: false,
-          updateDate: "2021-07-18",
+          updateDate: "2021-07-19",
           negativeOffset: 0
         },
         {

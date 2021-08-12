@@ -34,8 +34,14 @@
           <center>
             <span class="text-h6 text-weight-regular">
               <i>
-                Hybrid Meeting online and onsite in Padang, 20-22 September 2021
-              </i>
+                <s
+                  >Hybrid Meeting online and onsite in Padang, 20-22 September
+                  2021</s
+                > </i
+              ><br />
+              <i
+                ><b>Full Online Meeting, 20-22 September 2021<sup>*</sup></b></i
+              >
             </span>
             <br />
             <span class="text-h5 text-weight-bold">
@@ -47,6 +53,12 @@
             <center>
               LAPAN - Kyoto University <br />
               International Symposium for Equatorial Atmosphere
+            </center>
+          </div>
+          <div class="text-h6 text-weight-regular q-mt-lg">
+            <center>
+              <sup>*</sup>)&nbsp; considering the circumstances due to Covid-19,
+              we decide to change into Full Online Meeting
             </center>
           </div>
         </div>
@@ -898,7 +910,7 @@ export default {
     };
   },
   computed: {
-    isAnyUpdate(){
+    isAnyUpdate() {
       const t = this;
       // this.floatingButton.forEach((element, index, arr) => {
       //   let cdate = isUpdate(element.updateDate)

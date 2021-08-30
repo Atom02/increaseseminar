@@ -65,7 +65,7 @@ app.config['CORS_SUPPORTS_CREDENTIALS'] = True
 app.config['MAIL_SERVER']='mail.lapan.go.id'
 app.config['MAIL_PORT']=465
 app.config['MAIL_USERNAME']='increase@lapan.go.id'
-app.config['MAIL_PASSWORD']='1Ncre@se'
+app.config['MAIL_PASSWORD']='Lever4ge!'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 

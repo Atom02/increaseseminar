@@ -4,6 +4,61 @@
     <!-- <template v-slot:media>
         <img src="~assets/img/radar.gif" style="filter: brightness(40%);" />
       </template> -->
+    <div id="sect0" ref="announcement" class="sect q-py-md">
+      <div class="row q-mb-md">
+        <div class="col-12 text-center text-h4">
+          <span class="text-red-14" style="border-bottom:thin solid">
+            <b>Announcement</b>
+          </span>
+        </div>
+      </div>
+      <q-separator />
+      <div class="row justify-center">
+        <div class="col-12 text-center q-pa-sm">
+          <!-- <q-icon
+            v-if="isUpdate('2021-08-31')"
+            class="text-red blink"
+            name="mdi-new-box"
+            size="xl"
+          /> -->
+          <q-btn color="primary">
+            <a
+              href="/pdf/Announcement_to _all_participants_20210831.pdf"
+              download="video submission, abstract list and FAQ.pdf"
+              style="text-decoration:none"
+              class="text-white"
+            >
+              Video Submission, Abstract List and Frequently Asked Questions
+            </a>
+            <q-badge
+              v-if="isUpdate('2021-08-31')"
+              color="red"
+              floating
+              class="blink"
+            >
+              New
+              <!-- <q-icon
+                  v-if="isUpdate('2021-08-31')"
+                  class="text-white blink"
+                  name="mdi-new-box"
+                  size="md"
+                /> -->
+            </q-badge>
+          </q-btn>
+          <!-- <q-btn
+            class="text-h6 q-mb-md"
+            size="sm"
+            color="primary"
+            @click="openAnnouncement"
+            label="Video Submission"
+          >
+            <q-badge v-if="isUpdate('2021-08-31')" color="red" floating>
+              New
+            </q-badge>
+          </q-btn> -->
+        </div>
+      </div>
+    </div>
     <div id="sect1" class="sect q-py-md">
       <div
         class="row justify-center items-center content-center q-mt-lg"
@@ -117,9 +172,10 @@
             ></q-btn>
             <span style="display:inline-block;" class="q-mr-md">OR</span>
             <q-btn
-              size="lg"
+              class="blink"
+              size="xl"
               flat
-              label="join as participant"
+              label="join as participant (FREE)"
               style="color:#FF0080"
               @click="openDialog"
             ></q-btn>
@@ -563,7 +619,7 @@
         </q-bar>
 
         <q-card-section>
-          <div class="text-h6">Register as Participant</div>
+          <div class="text-h6">Register as Participant (FREE)</div>
         </q-card-section>
         <q-card-section class="q-pt-md">
           <q-form
@@ -699,6 +755,28 @@
         </q-card-section>
       </q-card>
     </q-dialog>
+    <q-dialog
+      v-model="anouncementDialog"
+      persistent
+      :maximized="maximizedToggle"
+      transition-show="slide-up"
+      transition-hide="slide-down"
+    >
+      <component v-bind:is="compAnouncement"></component>
+      <!-- <q-card style="min-width: 45vw;">
+        <q-bar class="bg-primary text-white">
+          <q-space />
+          <q-btn dense flat icon="close" size="md" v-close-popup>
+            <q-tooltip content-class="bg-white text-primary text-h6"
+              >Close</q-tooltip
+            >
+          </q-btn>
+        </q-bar>
+        <q-card-section style="max-height: 80vh" class="scroll">
+          
+        </q-card-section>
+      </q-card> -->
+    </q-dialog>
     <q-page-sticky position="top-right" :offset="[18, 18]" class="desktop-only">
       <q-fab
         v-model="fab1"
@@ -714,12 +792,20 @@
             :key="index"
             :label="item.label"
             :color="item.color"
-            @click="scrollToElement(item.scrollTo, item.negativeOffset)"
+            v-on="
+              item.hasOwnProperty('clickFunc')
+                ? { click: () => item.clickFunc(parms) }
+                : {
+                    click: () =>
+                      scrollToElement(item.scrollTo, item.negativeOffset)
+                  }
+            "
           >
             <q-badge
               v-if="isUpdate(item.updateDate)"
               color="red"
               label="update"
+              class="blink"
               floating
             />
           </q-fab-action>
@@ -731,6 +817,7 @@
         floating
         style="z-index:995"
         v-if="isAnyUpdate"
+        class="blink"
       />
     </q-page-sticky>
     <q-page-sticky
@@ -755,10 +842,18 @@
             :key="index"
             :label="item.label"
             :color="item.color"
-            @click="scrollToElement(item.scrollTo, item.negativeOffset)"
+            v-on="
+              item.hasOwnProperty('clickFunc')
+                ? { click: () => item.clickFunc(parms) }
+                : {
+                    click: () =>
+                      scrollToElement(item.scrollTo, item.negativeOffset)
+                  }
+            "
           >
             <q-badge
               v-if="isUpdate(item.updateDate)"
+              class="blink"
               color="red"
               label="update"
               floating
@@ -771,12 +866,26 @@
         label="update"
         floating
         style="z-index:995"
+        class="blink"
         v-if="isAnyUpdate"
       />
     </q-page-sticky>
   </q-page>
 </template>
 <style scoped>
+#sect0 {
+  /* background: linear-gradient(180deg, rgba(255,255,255,0.9) 5%, rgba(0,0,0,0.6) 100%),
+    url("~assets/img/conference.jpg"); */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("~assets/img/announcement.jpg");
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  /* min-height: 400px; */
+}
 #sect1 {
   /* background: linear-gradient(
       180deg,
@@ -816,14 +925,27 @@
 .dateBox {
   background-color: #ff6807;
 }
+.blink {
+  animation: blinker 1s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+a {
+  cursor: pointer;
+}
 </style>
 <script>
 import _ from "lodash";
 import { Flipped } from "vue-flip-toolkit";
-import { scroll, openURL, Cookies, Notify } from "quasar";
+import { scroll, openURL, Cookies, Notify, exportFile } from "quasar";
 const { getScrollTarget, setScrollPosition } = scroll;
 import { DateTime as LuxonDT } from "luxon";
 import VueRecaptcha from "vue-recaptcha";
+import VideoSubmission from "components/VideoSubmission.vue";
 // Vue.use(VueSocialSharing);
 export default {
   // meta: {
@@ -836,6 +958,7 @@ export default {
   components: {
     // Flipped
     // "vue-recaptcha": VueRecaptcha
+    "video-submission": VideoSubmission
   },
   data() {
     return {
@@ -848,6 +971,15 @@ export default {
           scrollTo: "register",
           hasUpdate: false,
           updateDate: "2021-05-11",
+          negativeOffset: -150
+          // clickFunc: this.openDialog
+        },
+        {
+          label: "Announcement",
+          color: "negative",
+          scrollTo: "announcement",
+          hasUpdate: false,
+          updateDate: "2021-08-31",
           negativeOffset: -150
         },
         {
@@ -906,7 +1038,10 @@ export default {
       participantFormRobot: false,
       registerLoading: false,
       countryList: [],
-      countryListimt: []
+      countryListimt: [],
+      anouncementDialog: false,
+      anouncementDialogDay: 7,
+      compAnouncement: null
     };
   },
   computed: {
@@ -1133,6 +1268,14 @@ export default {
       //   nationality: ""
       // };
       this.dialog = false;
+    },
+    openAnnouncement() {
+      const t = this;
+      t.compAnouncement = "video-submission";
+      t.anouncementDialog = true;
+    },
+    download(target, cnt) {
+      exportFile(target, cnt);
     }
   },
   mounted() {

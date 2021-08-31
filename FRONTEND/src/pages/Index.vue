@@ -172,9 +172,7 @@
             ></q-btn>
             <span style="display:inline-block;" class="q-mr-md">OR</span>
             <q-btn
-              class="blink"
               size="xl"
-              flat
               label="join as participant (FREE)"
               style="color:#FF0080"
               @click="openDialog"

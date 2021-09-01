@@ -21,15 +21,13 @@
             name="mdi-new-box"
             size="xl"
           /> -->
-          <q-btn color="primary">
-            <a
-              href="/pdf/Announcement_to _all_participants_20210831.pdf"
-              download="video submission, abstract list and FAQ.pdf"
-              style="text-decoration:none"
-              class="text-white"
-            >
-              Video Submission, Abstract List and Frequently Asked Questions
-            </a>
+          <q-btn
+            type="a"
+            color="primary"
+            href="/pdf/announcement1.pdf"
+            download="video submission, abstract list and FAQ.pdf"
+            label="Video Submission, Abstract List and Frequently Asked Questions"
+          >
             <q-badge
               v-if="isUpdate('2021-08-31')"
               color="red"

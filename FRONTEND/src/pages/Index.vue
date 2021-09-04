@@ -776,7 +776,7 @@
         </q-card-section>
       </q-card> -->
     </q-dialog>
-    <q-page-sticky position="top-right" :offset="[18, 18]" class="desktop-only">
+    <q-page-sticky position="top-right" :offset="[18, 18]" v-if="isBig">
       <q-fab
         v-model="fab1"
         label="section"
@@ -822,7 +822,7 @@
     <q-page-sticky
       position="bottom-right"
       :offset="[18, 18]"
-      class="mobile-only"
+      v-else
     >
       <q-fab
         ref="mobileFab"
@@ -963,6 +963,7 @@ export default {
     return {
       fab1: true,
       forceCloseFab: false,
+      isBig:false,
       floatingButton: [
         {
           label: "Register",
@@ -1275,7 +1276,35 @@ export default {
     },
     download(target, cnt) {
       exportFile(target, cnt);
+    },
+    setIsMax() {
+      // console.log("IS MAX?");
+      if (this.$q.screen.lt.md) {
+        this.maximizedToggle = true;
+        this.isBig = false
+      } else {
+        this.maximizedToggle = false;
+        this.isBig = true
+      }
     }
+  },
+  created() {
+    const t = this;
+    window.addEventListener(
+      "resize",
+      _.debounce(function() {
+        t.setIsMax();
+      }, 200)
+    );
+  },
+  destroyed() {
+    const t = this;
+    window.removeEventListener(
+      "resize",
+      _.debounce(function() {
+        t.setIsMax();
+      }, 200)
+    );
   },
   mounted() {
     const t = this;
@@ -1321,8 +1350,10 @@ export default {
 
     if (this.$q.screen.lt.md) {
       this.maximizedToggle = true;
+      this.isBig = false
     } else {
-      console.log("IS BIG");
+      this.isBig = true
+      // console.log("IS BIG");
     }
 
     this.participantFormErrors = _.cloneDeep(this.participantForm);

@@ -21,12 +21,21 @@
             name="mdi-new-box"
             size="xl"
           /> -->
+          <q-badge
+            v-if="!isUpdate('2021-08-31')"
+            outline
+            color="black"
+            class="q-mr-sm q-pa-sm"
+            size="lg"
+            >31/08/2021</q-badge
+          >
           <q-btn
             type="a"
             color="primary"
             href="/pdf/announcement1.pdf"
             download="video submission, abstract list and FAQ.pdf"
             label="Video Submission, Abstract List and Frequently Asked Questions"
+            target="_blank"
           >
             <q-badge
               v-if="isUpdate('2021-08-31')"
@@ -35,12 +44,6 @@
               class="blink"
             >
               New
-              <!-- <q-icon
-                  v-if="isUpdate('2021-08-31')"
-                  class="text-white blink"
-                  name="mdi-new-box"
-                  size="md"
-                /> -->
             </q-badge>
           </q-btn>
           <!-- <q-btn
@@ -1323,6 +1326,11 @@ export default {
     }
 
     this.participantFormErrors = _.cloneDeep(this.participantForm);
+
+    const lhast = location.hash;
+    if (lhast == "#register") {
+      t.openDialog();
+    }
     // this.participantForm = {
     //   name: "Candra Nur Ihsan",
     //   email: "candra.nurihsan9@gmail.com",

@@ -86,7 +86,7 @@
             <span class="text-h6 text-weight-regular">
               <i>
                 <s
-                  >Hybrid Meeting online and onsite in Padang, 20-22 September
+                  >Hybrid Meeting online and onsite in Padang, 20-21 September
                   2021</s
                 > </i
               ><br />

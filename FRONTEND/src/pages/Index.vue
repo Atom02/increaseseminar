@@ -85,14 +85,15 @@
           <center>
             <span class="text-h6 text-weight-regular">
               <i>
-                <s
-                  >Hybrid Meeting online and onsite in Padang, 20-21 September
-                  2021</s
-                > </i
-              ><br />
-              <i
-                ><b>Full Online Meeting, 20-22 September 2021<sup>*</sup></b></i
-              >
+                <s>
+                  Hybrid Meeting online and onsite in Padang, 20-21 September
+                  2021
+                </s>
+              </i>
+              <br />
+              <i>
+                <b>Full Online Meeting, 20-22 September 2021<sup>*</sup> </b>
+              </i>
             </span>
             <br />
             <span class="text-h5 text-weight-bold">
@@ -313,45 +314,48 @@
           <div class="text-h6">
             <div class="row q-ma-none q-pa-none">
               <div class="col-12 col-md-4 text-center q-pa-sm">
-                <q-avatar :size="isBig ? '300px' : '200px' ">
+                <q-avatar :size="isBig ? '300px' : '200px'">
                   <img src="~assets/img/shigeo.jpg" />
                 </q-avatar>
                 <br />
                 <span class="text-h6">
                   Prof. Shigeo Yoden <br />
                   (Kyoto Univ, Japan)
-                </span> <br/>
+                </span>
+                <br />
                 <span class="text-h5">
-                  "Dynamical Influence of the Stratosphere on the Tropical Troposphere"
+                  "Dynamical Influence of the Stratosphere on the Tropical
+                  Troposphere"
                 </span>
               </div>
               <div class="col-12 col-md-4 text-center q-pa-sm">
-                <q-avatar :size="isBig ? '300px' : '200px' ">
+                <q-avatar :size="isBig ? '300px' : '200px'">
                   <img src="~assets/img/jannyeng.jpg" />
                 </q-avatar>
                 <br />
                 <span class="text-h6">
                   Prof. J.Y. Liu <br />
-                  (NCU, Taiwan)
-                </span><br/>
+                  (NCU, Taiwan) </span
+                ><br />
                 <span class="text-h5">
-                  "Equatorial Ionosphere Weather Observed by FORMOSAT-3/COSMIC and FORMOSAT-7/COSMIC-2"
+                  "Equatorial Ionosphere Weather Observed by FORMOSAT-3/COSMIC
+                  and FORMOSAT-7/COSMIC-2"
                 </span>
               </div>
               <div class="col-12 col-md-4 text-center q-pa-sm">
-                <q-avatar :size="isBig ? '300px' : '200px' ">
+                <q-avatar :size="isBig ? '300px' : '200px'">
                   <img src="~assets/img/didi.jpg" />
                 </q-avatar>
                 <br />
                 <span class="text-h6">
                   Dr. Didi Satiadi <br />
-                  (LAPAN BRIN, Indonesia)
-                </span><br/>
+                  (LAPAN BRIN, Indonesia) </span
+                ><br />
                 <span class="text-h5">
-                  "The Past and Future Use of the Equatorial Atmosphere Radar in Atmospheric Research in Indonesia"
+                  "The Past and Future Use of the Equatorial Atmosphere Radar in
+                  Atmospheric Research in Indonesia"
                 </span>
               </div>
-              
             </div>
             <!-- <ul>
               <li>

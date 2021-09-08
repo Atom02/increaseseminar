@@ -372,7 +372,7 @@
           <div class="text-h6">
             <ul>
               <li>Prof. Hiroyuki Hashiguchi (Kyoto Univ, Japan)</li>
-              <li>Dr. Wahyudi Hasbi (LAPAN, Indonesia)</li>
+              <li>Dr. Wahyudi Hasbi (LAPAN BRIN, Indonesia)</li>
               <li>Dr. Marzuki (Andalas Univ, Indonesia)</li>
               <li>
                 Dr. Yasunobu Miyoshi (Kyushu Univ, Japan)

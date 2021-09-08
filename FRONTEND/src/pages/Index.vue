@@ -451,13 +451,13 @@
         <div class="col-12 col-sm-4 q-pa-sm text-body1">
           <div>Organized by:</div>
           <div class="text-weight-bold">
-            Pusat Sains dan Teknologi Atmosfer (PSTA) <br />
+            Pusat Riset Sains dan Teknologi Atmosfer PRSTA - LAPAN <br />
             Research Institute for Sustainable Humanosphere (RISH)
           </div>
           <div class="q-mt-sm">Supported by:</div>
           <div class="text-weight-bold">            
             Badan Riset dan Inovasi Nasional <br />
-            Pusat Riset Sains dan Teknologi Atmosfer (PRSTA) LAPAN <br />
+            LAPAN <br />
             Kyoto University <br />
             Research Institute for Sustainable Humanosphere
           </div>

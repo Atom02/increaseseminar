@@ -8,7 +8,7 @@
       <div class="row q-mb-md">
         <div class="col-12 text-center text-h4">
           <span class="text-red-14" style="border-bottom:thin solid">
-            <b>Announcement</b>
+            <b class="blink">Announcement</b>
           </span>
         </div>
       </div>

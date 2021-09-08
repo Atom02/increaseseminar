@@ -311,10 +311,52 @@
         </div>
       </div>
       <div class="row justify-center items-start content-center q-mt-md">
-        <div class="col-11 col-md-5 q-pa-sm text-body1">
+        <div class="col-11 q-pa-sm text-body1">
           <div class="text-h5 text-primary">Keynote Speakers</div>
           <div class="text-h6">
-            <ul>
+            <div class="row q-ma-none q-pa-none">
+              <div class="col-12 col-md-4 text-center q-pa-sm">
+                <q-avatar :size="isBig ? '300px' : '200px' ">
+                  <img src="~assets/img/shigeo.jpg" />
+                </q-avatar>
+                <br />
+                <span class="text-h6">
+                  Prof. Shigeo Yoden <br />
+                  (Kyoto Univ, Japan)
+                </span> <br/>
+                <span class="text-h5">
+                  "Dynamical Influence of the Stratosphere on the Tropical Troposphere"
+                </span>
+              </div>
+              <div class="col-12 col-md-4 text-center q-pa-sm">
+                <q-avatar :size="isBig ? '300px' : '200px' ">
+                  <img src="~assets/img/jannyeng.jpg" />
+                </q-avatar>
+                <br />
+                <span class="text-h6">
+                  Prof. J.Y. Liu <br />
+                  (NCU, Taiwan)
+                </span><br/>
+                <span class="text-h5">
+                  "Equatorial Ionosphere Weather Observed by FORMOSAT-3/COSMIC and FORMOSAT-7/COSMIC-2"
+                </span>
+              </div>
+              <div class="col-12 col-md-4 text-center q-pa-sm">
+                <q-avatar :size="isBig ? '300px' : '200px' ">
+                  <img src="~assets/img/didi.jpg" />
+                </q-avatar>
+                <br />
+                <span class="text-h6">
+                  Dr. Didi Satiadi <br />
+                  (LAPAN BRIN, Indonesia)
+                </span><br/>
+                <span class="text-h5">
+                  "The Past and Future Use of the Equatorial Atmosphere Radar in Atmospheric Research in Indonesia"
+                </span>
+              </div>
+              
+            </div>
+            <!-- <ul>
               <li>
                 Prof. Shigeo Yoden (Kyoto Univ, Japan)
               </li>
@@ -322,10 +364,10 @@
                 Prof. J.Y. Liu (NCU, Taiwan)
               </li>
               <li>Dr. Didi Satiadi (LAPAN, Indonesia)</li>
-            </ul>
+            </ul> -->
           </div>
         </div>
-        <div class="col-11 col-md-5 q-pa-sm text-body1">
+        <div class="col-11 q-pa-sm text-body1">
           <div class="text-h5 text-primary">Invited Speakers</div>
           <div class="text-h6">
             <ul>
@@ -344,7 +386,7 @@
               </li>
               <li>Dr. Acep Purqon (ITB dan ITERA, Indonesia)</li>
               <li>Prof. Toshiaki Umezawa (Kyoto University, Japan)</li>
-              <li>Prof. Sulaeman Yusuf (LIPI, Indonesia)</li>
+              <li>Prof. Sulaeman Yusuf (LIPI BRIN, Indonesia)</li>
             </ul>
           </div>
         </div>
@@ -455,7 +497,7 @@
             Research Institute for Sustainable Humanosphere (RISH)
           </div>
           <div class="q-mt-sm">Supported by:</div>
-          <div class="text-weight-bold">            
+          <div class="text-weight-bold">
             Badan Riset dan Inovasi Nasional <br />
             LAPAN <br />
             Kyoto University <br />

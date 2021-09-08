@@ -380,7 +380,7 @@
               <li>
                 Prof. Manabu D. Yamanaka (Kobe Univ, Japan)
               </li>
-              <li>Prof. Ninong Komala (LAPAN, Indonesia)</li>
+              <li>Prof. Ninong Komala (LAPAN BRIN, Indonesia)</li>
               <li>
                 Prof. Masatomo Fujiwara (Hokkaido Univ, Japan)
               </li>
@@ -589,7 +589,7 @@
   LAPAN - Kyoto University 
   International Symposium for Equatorial Atmosphere"
             quote="Joint program of INternational Conference on Radioscience, Equatorial Atmospheric Science and Environment (INCREASE) and The 6th Asia Research Node (ARN) Symposium on Humanosphere Science"
-            hashtags="ear20anniversary,lapan,increase,seminar"
+            hashtags="ear20anniversary,lapan,increase,seminar,brin"
             media="https://ear20.lapan.go.id/img/radar.7d21f604.gif"
             style="text-decoration:none"
           >

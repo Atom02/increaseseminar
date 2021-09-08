@@ -1050,7 +1050,7 @@ export default {
           color: "accent",
           scrollTo: "keyNoteSpeaker",
           hasUpdate: true,
-          updateDate: "2021-05-26",
+          updateDate: "2021-09-08",
           negativeOffset: 0
         },
         {

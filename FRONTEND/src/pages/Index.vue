@@ -21,13 +21,12 @@
             name="mdi-new-box"
             size="xl"
           /> -->
-          <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg"
-            >31/08/2021</q-badge
-          >
+          <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
+            31/08/2021
+          </q-badge>
           <q-btn
-            type="a"
+            @click="openURL('/pdf/announcement1.pdf')"
             color="primary"
-            href="/pdf/announcement1.pdf"
             download="video submission, abstract list and FAQ.pdf"
             label="Video Submission, Abstract List and Frequently Asked Questions"
             target="_blank"
@@ -1092,7 +1091,8 @@ export default {
       countryListimt: [],
       anouncementDialog: false,
       anouncementDialogDay: 7,
-      compAnouncement: null
+      compAnouncement: null,
+      openURL
     };
   },
   computed: {

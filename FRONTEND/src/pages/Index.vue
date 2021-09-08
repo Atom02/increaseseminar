@@ -21,12 +21,7 @@
             name="mdi-new-box"
             size="xl"
           /> -->
-          <q-badge
-            v-if="!isUpdate('2021-08-31')"
-            outline
-            color="black"
-            class="q-mr-sm q-pa-sm"
-            size="lg"
+          <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg"
             >31/08/2021</q-badge
           >
           <q-btn
@@ -77,12 +72,12 @@
             spinner-color="white"
             style="width:30%"
           />
-          &nbsp;
+          <!-- &nbsp;
           <q-img
             src="~assets/img/Logo_RISH.jpeg"
             spinner-color="white"
             style="width:30%"
-          />
+          /> -->
         </div>
       </div>
       <div class="row justify-center items-center content-center q-mt-xl">
@@ -460,15 +455,25 @@
             Research Institute for Sustainable Humanosphere (RISH)
           </div>
           <div class="q-mt-sm">Supported by:</div>
-          <div class="text-weight-bold">
-            Lembaga Penerbangan dan Antariksa Nasional (LAPAN) <br />
-            Kyoto University
+          <div class="text-weight-bold">            
+            Badan Riset dan Inovasi Nasional <br />
+            Pusat Riset Sains dan Teknologi Atmosfer (PRSTA) LAPAN <br />
+            Kyoto University <br />
+            Research Institute for Sustainable Humanosphere
           </div>
           <div>
+            <q-img
+              src="~assets/img/new_brinlogo.png"
+              spinner-color="white"
+              style="width:20%"
+              title="Badan Riset dan Inovasi Nasional"
+            />
+            &nbsp;
             <q-img
               src="~assets/img/logo_baru_lapan.jpg"
               spinner-color="white"
               style="width:20%"
+              title="LAPAN"
             />
             <!-- &nbsp;
             <q-img
@@ -487,6 +492,13 @@
               src="~assets/img/kyotouniv_logo.jpg"
               spinner-color="white"
               style="width:20%"
+              title="KYOTO UNIVERSITY"
+            />&nbsp;
+            <q-img
+              src="~assets/img/Logo_RISH.jpeg"
+              spinner-color="white"
+              style="width:20%"
+              title="esearch Institute for Sustainable Humanosphere"
             />
           </div>
           <div class="q-mt-sm">Related Link:</div>
@@ -819,11 +831,7 @@
         class="blink"
       />
     </q-page-sticky>
-    <q-page-sticky
-      position="bottom-right"
-      :offset="[18, 18]"
-      v-else
-    >
+    <q-page-sticky position="bottom-right" :offset="[18, 18]" v-else>
       <q-fab
         ref="mobileFab"
         :persistent="true"
@@ -963,7 +971,7 @@ export default {
     return {
       fab1: true,
       forceCloseFab: false,
-      isBig:false,
+      isBig: false,
       floatingButton: [
         {
           label: "Register",
@@ -1281,10 +1289,10 @@ export default {
       // console.log("IS MAX?");
       if (this.$q.screen.lt.md) {
         this.maximizedToggle = true;
-        this.isBig = false
+        this.isBig = false;
       } else {
         this.maximizedToggle = false;
-        this.isBig = true
+        this.isBig = true;
       }
     }
   },
@@ -1350,9 +1358,9 @@ export default {
 
     if (this.$q.screen.lt.md) {
       this.maximizedToggle = true;
-      this.isBig = false
+      this.isBig = false;
     } else {
-      this.isBig = true
+      this.isBig = true;
       // console.log("IS BIG");
     }
 

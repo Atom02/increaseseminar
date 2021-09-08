@@ -466,12 +466,12 @@
           </template>
         </div>
       </div>
-      <div class="row justify-center q-mt-md">
+      <!-- <div class="row justify-center q-mt-md">
         <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
           DAY 3
         </div>
-      </div>
-      <div class="row justify-center">
+      </div> -->
+      <!-- <div class="row justify-center">
         <div class="col-12 col-md-5 q-pa-sm text-h6">
           <div class="q-mb-sm">
             <span class="scheduleTime">
@@ -483,7 +483,7 @@
           </div>
         </div>
         <div class="col-12 col-md-5 q-pa-sm text-h6">&nbsp;</div>
-      </div>
+      </div> -->
     </div>
     <div id="sectLast" ref="otherInfo" class="sect q-py-md">
       <div class="row justify-center items-start content-center q-mt-md">
@@ -1055,10 +1055,10 @@ export default {
         },
         {
           label: "Schedule",
-          color: "dark",
+          color: "orange-10",
           scrollTo: "schedule",
           hasUpdate: true,
-          updateDate: "2021-05-03",
+          updateDate: "2021-09-08",
           negativeOffset: 0
         },
         {

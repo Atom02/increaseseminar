@@ -283,7 +283,7 @@
       </div>
       <div class="row justify-center items-start content-center q-mt-lg">
         <div class="col-11 col-md-3 text-white text-h5 q-pa-sm dateBox">
-          20 - 22 September 2021
+          20 - 21 September 2021
         </div>
         <div class="col-11 col-md-7 text-white text-h5 q-px-none q-pt-none">
           <!-- MAIN EVENT, <br /> -->
@@ -294,9 +294,6 @@
               <b>R</b>adioscience, <b>E</b>quatorial <b>A</b>tmospheric
               <b>S</b>cience and <b>E</b>nvironment (<b>INCREASE</b>) and The
               6th Asia Research Node (ARN) Symposium on Humanosphere Science
-            </li>
-            <li>
-              EAR excursion
             </li>
           </ul>
 
@@ -1045,7 +1042,7 @@ export default {
           color: "secondary",
           scrollTo: "importantDates",
           hasUpdate: false,
-          updateDate: "2021-07-19",
+          updateDate: "2021-09-08",
           negativeOffset: 0
         },
         {

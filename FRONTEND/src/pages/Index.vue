@@ -15,31 +15,55 @@
       <q-separator />
       <div class="row justify-center">
         <div class="col-12 text-center q-pa-sm">
+          <div class="q-my-sm">
+            <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
+              14/09/2021
+            </q-badge>
+            <q-btn
+              @click="openURL('/pdf/brochure20210913upload.pdf')"
+              color="primary"
+              download="video submission, abstract list and FAQ.pdf"
+              label="EAR Brochure"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-09-14')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
+          <q-separator />
           <!-- <q-icon
             v-if="isUpdate('2021-08-31')"
             class="text-red blink"
             name="mdi-new-box"
             size="xl"
           /> -->
-          <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
-            31/08/2021
-          </q-badge>
-          <q-btn
-            @click="openURL('/pdf/announcement1.pdf')"
-            color="primary"
-            download="video submission, abstract list and FAQ.pdf"
-            label="Video Submission, Abstract List and Frequently Asked Questions"
-            target="_blank"
-          >
-            <q-badge
-              v-if="isUpdate('2021-08-31')"
-              color="red"
-              floating
-              class="blink"
-            >
-              New
+          <div class="q-my-sm">
+            <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
+              31/08/2021
             </q-badge>
-          </q-btn>
+            <q-btn
+              @click="openURL('/pdf/announcement1.pdf')"
+              color="primary"
+              download="video submission, abstract list and FAQ.pdf"
+              label="Video Submission, Abstract List and Frequently Asked Questions"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-08-31')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
           <!-- <q-btn
             class="text-h6 q-mb-md"
             size="sm"

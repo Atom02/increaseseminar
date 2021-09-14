@@ -17,7 +17,7 @@
         <div class="col-12 text-center q-pa-sm">
           <div class="q-my-sm">
             <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
-              14/09/2021
+              14 September 2021
             </q-badge>
             <q-btn
               @click="openURL('/pdf/brochure20210913upload.pdf')"
@@ -45,7 +45,7 @@
           /> -->
           <div class="q-my-sm">
             <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
-              31/08/2021
+              31 August 2021
             </q-badge>
             <q-btn
               @click="openURL('/pdf/announcement1.pdf')"
@@ -1053,7 +1053,7 @@ export default {
           color: "negative",
           scrollTo: "announcement",
           hasUpdate: false,
-          updateDate: "2021-08-31",
+          updateDate: "2021-09-14",
           negativeOffset: -150
         },
         {

@@ -16,13 +16,57 @@
       <div class="row justify-center">
         <div class="col-12 text-center q-pa-sm">
           <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
+            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
+              16 September 2021
+            </q-badge> <br/>
+            <q-btn
+              @click="openURL('/increaseZoomBackground.png')"
+              color="primary"
+              download="Virtual Background For the Seminar"
+              label="Virtual Background For the Seminar"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-09-16')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
+          <q-separator />
+          <div class="q-my-sm">
+            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
+              16 September 2021
+            </q-badge> <br/>
+            <q-btn
+              @click="openAnnouncement('paralel-schedule')"
+              color="primary"
+              download="Paralel Session Schedule"
+              label="Paralel Session Schedule"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-09-16')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
+          <q-separator />
+          <div class="q-my-sm">
+            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
               14 September 2021
-            </q-badge>
+            </q-badge> <br/>
             <q-btn
               @click="openURL('/pdf/brochure20210913upload.pdf')"
               color="primary"
-              download="video submission, abstract list and FAQ.pdf"
+              download="Ear Brocuhre.pdf"
               label="EAR Brochure"
               target="_blank"
             >
@@ -44,9 +88,9 @@
             size="xl"
           /> -->
           <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-pa-sm" size="lg">
+            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
               31 August 2021
-            </q-badge>
+            </q-badge> <br/>
             <q-btn
               @click="openURL('/pdf/announcement1.pdf')"
               color="primary"
@@ -1019,6 +1063,7 @@ const { getScrollTarget, setScrollPosition } = scroll;
 import { DateTime as LuxonDT } from "luxon";
 import VueRecaptcha from "vue-recaptcha";
 import VideoSubmission from "components/VideoSubmission.vue";
+import ParalelSchedule from "components/ParalelSchedule.vue";
 // Vue.use(VueSocialSharing);
 export default {
   // meta: {
@@ -1031,7 +1076,8 @@ export default {
   components: {
     // Flipped
     // "vue-recaptcha": VueRecaptcha
-    "video-submission": VideoSubmission
+    "video-submission": VideoSubmission,
+    "paralel-schedule": ParalelSchedule
   },
   data() {
     return {
@@ -1344,9 +1390,9 @@ export default {
       // };
       this.dialog = false;
     },
-    openAnnouncement() {
+    openAnnouncement(component) {
       const t = this;
-      t.compAnouncement = "video-submission";
+      t.compAnouncement = component;
       t.anouncementDialog = true;
     },
     download(target, cnt) {

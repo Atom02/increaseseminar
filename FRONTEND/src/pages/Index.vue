@@ -1099,7 +1099,7 @@ export default {
           color: "negative",
           scrollTo: "announcement",
           hasUpdate: false,
-          updateDate: "2021-09-14",
+          updateDate: "2021-09-16",
           negativeOffset: -150
         },
         {

@@ -20,10 +20,32 @@
               16 September 2021
             </q-badge> <br/>
             <q-btn
-              @click="openURL('/increaseZoomBackground.png')"
+              @click="openURL('/pdf/schedule/ZoomIDandPasscodeForEAR20thAnniversary.pdf')"
               color="primary"
-              download="Virtual Background For the Seminar"
-              label="Virtual Background For the Seminar"
+              download="Zoom ID and passcode"
+              label="Zoom ID and passcode"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-09-16')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
+          <q-separator />
+          <div class="q-my-sm">
+            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
+              16 September 2021
+            </q-badge> <br/>
+            <q-btn
+              @click="openURL('/pdf/schedule/ScheduleSymposium.pdf')"
+              color="primary"
+              download="Symposium Schedule"
+              label="Day 1. Symposium Schedule"
               target="_blank"
             >
               <q-badge
@@ -45,7 +67,7 @@
               @click="openAnnouncement('paralel-schedule')"
               color="primary"
               download="Paralel Session Schedule"
-              label="Paralel Session Schedule"
+              label="Day 2. Paralel Session Schedule"
               target="_blank"
             >
               <q-badge
@@ -59,6 +81,29 @@
             </q-btn>
           </div>
           <q-separator />
+          <div class="q-my-sm">
+            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
+              16 September 2021
+            </q-badge> <br/>
+            <q-btn
+              @click="openURL('/increaseZoomBackground.png')"
+              color="primary"
+              download="Virtual Background For the Seminar"
+              label="Virtual Background For the Seminar"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-09-16')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
+          <q-separator />
+          
           <div class="q-my-sm">
             <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
               14 September 2021
@@ -473,7 +518,7 @@
       </div>
       <div class="row justify-center q-mt-md">
         <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
-          DAY 1
+          <q-btn label="Download Schedule" color="primary" @click="openURL('/pdf/schedule/ScheduleSymposium.pdf')" /> DAY 1 
         </div>
       </div>
       <div class="row justify-center">
@@ -508,7 +553,8 @@
       </div>
       <div class="row justify-center q-mt-md">
         <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
-          DAY 2 (Paralel Session)
+          <q-btn label="Download Schedule" color="primary" @click="openAnnouncement('paralel-schedule')" />
+          DAY 2 (Paralel Session) 
         </div>
       </div>
       <div class="row justify-center">

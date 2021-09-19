@@ -12,6 +12,11 @@ const routes = [
     children: [{ path: "", component: () => import("pages/Index.vue") }]
   },
   {
+    path: "/live",
+    component: () => import("layouts/EmptyLayout.vue"),
+    children: [{ path: "", component: () => import("pages/Live.vue") }]
+  },
+  {
     path: "/ear20",
     component: () => import("layouts/EmptyLayout.vue"),
     children: [{ path: "", component: () => import("pages/Ear20.vue") }]

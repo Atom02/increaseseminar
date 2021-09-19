@@ -15,19 +15,24 @@
       <q-separator />
       <div class="row justify-center">
         <div class="col-12 text-center q-pa-sm">
-          <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
-              16 September 2021
-            </q-badge> <br/>
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
+              19 September 2021
+            </q-badge>
+            <br />
             <q-btn
-              @click="openURL('/pdf/schedule/ZoomIDandPasscodeForEAR20thAnniversary.pdf')"
+              @click="openURL('/pdf/ABSTRACT_INCREASE.pdf')"
               color="primary"
-              download="Zoom ID and passcode"
-              label="Zoom ID and passcode"
+              label="Abstract of INCREASE and 6th ARN Symposium"
               target="_blank"
             >
               <q-badge
-                v-if="isUpdate('2021-09-16')"
+                v-if="isUpdate('2021-09-19')"
                 color="red"
                 floating
                 class="blink"
@@ -36,20 +41,29 @@
               </q-badge>
             </q-btn>
           </div>
-          <q-separator />
-          <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
-              16 September 2021
-            </q-badge> <br/>
+
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
+              19 September 2021
+            </q-badge>
+            <br />
             <q-btn
-              @click="openURL('/pdf/schedule/ScheduleSymposium.pdf')"
+              @click="
+                openURL(
+                  '/pdf/schedule/ZoomIDandPasscodeForEAR20thAnniversary.pdf'
+                )
+              "
               color="primary"
-              download="Symposium Schedule"
-              label="Day 1. Symposium Schedule"
+              label="Follow The Event On Zoom"
               target="_blank"
             >
               <q-badge
-                v-if="isUpdate('2021-09-16')"
+                v-if="isUpdate('2021-09-19')"
                 color="red"
                 floating
                 class="blink"
@@ -58,20 +72,31 @@
               </q-badge>
             </q-btn>
           </div>
-          <q-separator />
-          <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
-              16 September 2021
-            </q-badge> <br/>
+
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
+              19 September 2021
+            </q-badge>
+            <br />
             <q-btn
-              @click="openAnnouncement('paralel-schedule')"
+              @click="openAnnouncement('event-youtube')"
               color="primary"
-              download="Paralel Session Schedule"
-              label="Day 2. Paralel Session Schedule"
+              label="Follow The Event On YouTube"
               target="_blank"
             >
+            <!-- <q-btn
+              to="/live"
+              color="primary"
+              label="Follow The Event On YouTube"
+              target="_blank"
+            > -->
               <q-badge
-                v-if="isUpdate('2021-09-16')"
+                v-if="isUpdate('2021-09-19')"
                 color="red"
                 floating
                 class="blink"
@@ -80,11 +105,17 @@
               </q-badge>
             </q-btn>
           </div>
-          <q-separator />
-          <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
-              16 September 2021
-            </q-badge> <br/>
+
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
+              19 September 2021
+            </q-badge>
+            <br />
             <q-btn
               @click="openURL('/increaseZoomBackground.png')"
               color="primary"
@@ -102,12 +133,73 @@
               </q-badge>
             </q-btn>
           </div>
-          <q-separator />
-          
-          <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
+
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
+              16 September 2021
+            </q-badge>
+            <br />
+            <q-btn
+              @click="openURL('/pdf/schedule/ScheduleSymposium.pdf')"
+              color="primary"
+              download="Symposium Schedule"
+              label="Day 1. Symposium Schedule"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-09-16')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
+
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
+              16 September 2021
+            </q-badge>
+            <br />
+            <q-btn
+              @click="openAnnouncement('paralel-schedule')"
+              color="primary"
+              download="Paralel Session Schedule"
+              label="Day 2. Paralel Session Schedule"
+              target="_blank"
+            >
+              <q-badge
+                v-if="isUpdate('2021-09-16')"
+                color="red"
+                floating
+                class="blink"
+              >
+                New
+              </q-badge>
+            </q-btn>
+          </div>
+
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
               14 September 2021
-            </q-badge> <br/>
+            </q-badge>
+            <br />
             <q-btn
               @click="openURL('/pdf/brochure20210913upload.pdf')"
               color="primary"
@@ -125,17 +217,17 @@
               </q-badge>
             </q-btn>
           </div>
-          <q-separator />
-          <!-- <q-icon
-            v-if="isUpdate('2021-08-31')"
-            class="text-red blink"
-            name="mdi-new-box"
-            size="xl"
-          /> -->
+
           <div class="q-my-sm">
-            <q-badge outline color="black" class="q-mr-sm q-mb-sm q-pa-sm" size="lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
               31 August 2021
-            </q-badge> <br/>
+            </q-badge>
+            <br />
             <q-btn
               @click="openURL('/pdf/announcement1.pdf')"
               color="primary"
@@ -153,17 +245,6 @@
               </q-badge>
             </q-btn>
           </div>
-          <!-- <q-btn
-            class="text-h6 q-mb-md"
-            size="sm"
-            color="primary"
-            @click="openAnnouncement"
-            label="Video Submission"
-          >
-            <q-badge v-if="isUpdate('2021-08-31')" color="red" floating>
-              New
-            </q-badge>
-          </q-btn> -->
         </div>
       </div>
     </div>
@@ -173,17 +254,21 @@
         style="background-color:white"
       >
         <div class="col-11 col-sm-4 text-center">
-          <q-img
-            src="~assets/img/Logo Increase 3.png"
-            spinner-color="white"
-            style="width:30%"
-          />
-          &nbsp;
-          <q-img
-            src="~assets/img/ARN_rogo_100_0524-150x150.png"
-            spinner-color="white"
-            style="width:30%"
-          />
+          <Flipped flip-id="symposium">
+            <div>
+              <q-img
+                src="~assets/img/Logo Increase 3.png"
+                spinner-color="white"
+                style="width:30%"
+              />
+              &nbsp;
+              <q-img
+                src="~assets/img/ARN_rogo_100_0524-150x150.png"
+                spinner-color="white"
+                style="width:30%"
+              />
+            </div>
+          </Flipped>
           <!-- &nbsp;
           <q-img
             src="~assets/img/Logo_RISH.jpeg"
@@ -518,7 +603,12 @@
       </div>
       <div class="row justify-center q-mt-md">
         <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
-          <q-btn label="Download Schedule" color="primary" @click="openURL('/pdf/schedule/ScheduleSymposium.pdf')" /> DAY 1 
+          <q-btn
+            label="Download Schedule"
+            color="primary"
+            @click="openURL('/pdf/schedule/ScheduleSymposium.pdf')"
+          />
+          DAY 1
         </div>
       </div>
       <div class="row justify-center">
@@ -553,8 +643,12 @@
       </div>
       <div class="row justify-center q-mt-md">
         <div class="col-12 col-md-11 q-pa-sm dateBox text-h5">
-          <q-btn label="Download Schedule" color="primary" @click="openAnnouncement('paralel-schedule')" />
-          DAY 2 (Paralel Session) 
+          <q-btn
+            label="Download Schedule"
+            color="primary"
+            @click="openAnnouncement('paralel-schedule')"
+          />
+          DAY 2 (Paralel Session)
         </div>
       </div>
       <div class="row justify-center">
@@ -1110,6 +1204,7 @@ import { DateTime as LuxonDT } from "luxon";
 import VueRecaptcha from "vue-recaptcha";
 import VideoSubmission from "components/VideoSubmission.vue";
 import ParalelSchedule from "components/ParalelSchedule.vue";
+import EventYoutube from "components/EventYoutube.vue";
 // Vue.use(VueSocialSharing);
 export default {
   // meta: {
@@ -1120,10 +1215,11 @@ export default {
   layout: "Empty",
   name: "PageIndex",
   components: {
-    // Flipped
+    Flipped,
     // "vue-recaptcha": VueRecaptcha
     "video-submission": VideoSubmission,
-    "paralel-schedule": ParalelSchedule
+    "paralel-schedule": ParalelSchedule,
+    "event-youtube": EventYoutube
   },
   data() {
     return {
@@ -1145,7 +1241,7 @@ export default {
           color: "negative",
           scrollTo: "announcement",
           hasUpdate: false,
-          updateDate: "2021-09-16",
+          updateDate: "2021-09-19",
           negativeOffset: -150
         },
         {

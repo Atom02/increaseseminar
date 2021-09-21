@@ -22,17 +22,23 @@
               class="q-mr-sm q-mb-sm q-pa-sm"
               size="lg"
             >
-              19 September 2021
+              20 September 2021
             </q-badge>
             <br />
-            <q-btn
+            <!-- <q-btn
               @click="openURL('/pdf/ABSTRACT_INCREASE.pdf')"
+              color="primary"
+              label="Abstract of INCREASE and 6th ARN Symposium"
+              target="_blank"
+            > -->
+            <q-btn
+              @click="openAnnouncement('abstract')"
               color="primary"
               label="Abstract of INCREASE and 6th ARN Symposium"
               target="_blank"
             >
               <q-badge
-                v-if="isUpdate('2021-09-19')"
+                v-if="isUpdate('2021-09-20')"
                 color="red"
                 floating
                 class="blink"
@@ -89,7 +95,7 @@
               label="Follow The Event On YouTube"
               target="_blank"
             >
-            <!-- <q-btn
+              <!-- <q-btn
               to="/live"
               color="primary"
               label="Follow The Event On YouTube"
@@ -1205,6 +1211,7 @@ import VueRecaptcha from "vue-recaptcha";
 import VideoSubmission from "components/VideoSubmission.vue";
 import ParalelSchedule from "components/ParalelSchedule.vue";
 import EventYoutube from "components/EventYoutube.vue";
+import Abstract from "components/Abstract.vue";
 // Vue.use(VueSocialSharing);
 export default {
   // meta: {
@@ -1219,7 +1226,8 @@ export default {
     // "vue-recaptcha": VueRecaptcha
     "video-submission": VideoSubmission,
     "paralel-schedule": ParalelSchedule,
-    "event-youtube": EventYoutube
+    "event-youtube": EventYoutube,
+    abstract: Abstract
   },
   data() {
     return {

@@ -22,6 +22,36 @@
               class="q-mr-sm q-mb-sm q-pa-sm"
               size="lg"
             >
+              14 October 2021
+            </q-badge>
+            <br />
+            <!-- <q-btn
+              @click="openURL('/pdf/ABSTRACT_INCREASE.pdf')"
+              color="primary"
+              label="Abstract of INCREASE and 6th ARN Symposium"
+              target="_blank"
+            > -->
+            <q-badge
+              v-if="isUpdate('2021-10-15')"
+              color="red"
+              class="blink"
+            >
+              New
+            </q-badge>
+            <div style="font-size:16pt;font-weight:bold">
+              Review process (substantial review)-based on grammar and
+              palgiarism check revised manuscript-has been started since
+              Thursday, 12 October 2021
+            </div>
+          </div>
+
+          <div class="q-my-sm q-mb-lg">
+            <q-badge
+              outline
+              color="black"
+              class="q-mr-sm q-mb-sm q-pa-sm"
+              size="lg"
+            >
               20 September 2021
             </q-badge>
             <br />
@@ -375,8 +405,10 @@
               size="xl"
               label="join as participant (FREE)"
               style="color:#FF0080"
-              @click="openDialog"
-            ></q-btn>
+              disable
+            >
+            </q-btn>
+            <!-- @click="openDialog" -->
           </p>
         </div>
       </div>
@@ -1249,7 +1281,7 @@ export default {
           color: "negative",
           scrollTo: "announcement",
           hasUpdate: false,
-          updateDate: "2021-09-19",
+          updateDate: "2021-10-15",
           negativeOffset: -150
         },
         {
